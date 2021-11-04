@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Andrey Pudov. All Rights Reserved. Licensed under the Apache License, Version 2.0. See LICENSE.txt in the project root for license information.
 
 using BenchmarkDotNet.Configs;
+using BenchmarkDotNet.Diagnosers;
 using BenchmarkDotNet.Running;
 
 BenchmarkSwitcher
@@ -12,5 +13,6 @@ BenchmarkSwitcher
     .Run(
         args,
         ManualConfig.Create(DefaultConfig.Instance)
+            .AddDiagnoser(MemoryDiagnoser.Default)
             .WithOption(ConfigOptions.JoinSummary, true)
             .WithOption(ConfigOptions.DisableLogFile, true));
