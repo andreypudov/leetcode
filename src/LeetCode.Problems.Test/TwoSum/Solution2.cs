@@ -5,7 +5,7 @@ namespace LeetCode.Problems.Test.TwoSum;
 using NUnit.Framework;
 
 [TestFixture]
-public class Solution2 : TwoSum<Problems.TwoSum.Solution1>
+public class Solution2 : TwoSum<Problems.TwoSum.Solution2>
 {
     // Intentionally left bank
 }
