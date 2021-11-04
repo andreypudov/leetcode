@@ -27,6 +27,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.354" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\LeetCode.Problems.Benchmark\LeetCode.Problems.Benchmark.csproj" />
   </ItemGroup>
 
