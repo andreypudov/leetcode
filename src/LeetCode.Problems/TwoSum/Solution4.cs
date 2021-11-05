@@ -2,6 +2,9 @@
 
 namespace LeetCode.Problems.TwoSum;
 
+using System;
+using System.Collections.Generic;
+
 /// <summary>
 /// It turns out we can do it in one-pass. While we are iterating and inserting elements into the hash table,
 /// we also look back to check if current element's complement already exists in the hash table. If it exists,

@@ -2,7 +2,7 @@
 
 namespace LeetCode.Problems.Benchmark.TwoSum;
 
-public class Solution3 : TwoSum<Problems.TwoSum.Solution2>
+public class Solution3 : TwoSum<Problems.TwoSum.Solution3>
 {
     // Intentionally left bank
 }

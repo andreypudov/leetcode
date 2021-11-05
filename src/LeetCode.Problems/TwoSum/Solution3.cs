@@ -2,6 +2,9 @@
 
 namespace LeetCode.Problems.TwoSum;
 
+using System;
+using System.Collections.Generic;
+
 /// <summary>
 /// A simple implementation uses two iterations. In the first iteration,
 /// we add each element's value as a key and its index as a value to the hash
