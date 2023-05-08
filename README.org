@@ -1,0 +1,7 @@
+#+title: LeetCode
+#+author: Andrey Pudov
+#+date: <2023-05-08 Mon>
+
+| Title               | Difficulty |
+|---------------------+------------|
+| [[./problems/problem-70.py][70. Climbing Stairs]] | Easy       |
