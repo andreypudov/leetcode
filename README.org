@@ -5,5 +5,4 @@
 | Title               | Difficulty |
 |---------------------+------------|
 | [[./problems/problem-70.py][70. Climbing Stairs]] | Easy       |
-|---------------------+------------|
 | [[./problems/problem-13.py][13. Roman to Integer]] | Easy       |

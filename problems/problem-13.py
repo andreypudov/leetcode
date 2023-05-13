@@ -51,14 +51,14 @@ class Solution:
             # C - 100,
             # XC - 90
             # L - 50,
-            # LX - 40
+            # XL - 40
             # X - 10,
             # IX - 9
             # V - 5,
             # IV - 4
             # I - 1
 
-    def get2nextElems(self, s, pos):
+    def getNextToken(self, s, pos):
         lenght = len(s)
         if lenght - pos >= 2:
             return s[pos:pos+2]
