@@ -1,9 +1,22 @@
 class Solution:
+    # M - 1000
+    # CM - 900
+    # D - 500
+    # CD - 400
+    # C - 100,
+    # XC - 90
+    # L - 50,
+    # XL - 40
+    # X - 10,
+    # IX - 9
+    # V - 5,
+    # IV - 4
+    # I - 1
     def romanToInt(self, s: str) -> int:
         number = 0
         idx = 0
         while idx < len(s):
-            next_pair = self.get2nextElems(s, idx)
+            next_pair = self.getNextToken(s, idx)
             if next_pair[0] == 'M':
                 number += 1000
                 idx += 1
@@ -44,19 +57,6 @@ class Solution:
                 number += 1
                 idx += 1
         return number
-            # M - 1000
-            # CM - 900
-            # D - 500
-            # CD - 400
-            # C - 100,
-            # XC - 90
-            # L - 50,
-            # XL - 40
-            # X - 10,
-            # IX - 9
-            # V - 5,
-            # IV - 4
-            # I - 1
 
     def getNextToken(self, s, pos):
         lenght = len(s)
