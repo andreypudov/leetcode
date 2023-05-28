@@ -2,8 +2,9 @@
 #+author: Andrey Pudov
 #+date: <2023-05-08 Mon>
 
-| Title                | Difficulty |
-|----------------------+------------|
-| [[./problems/problem-13.py][13. Roman to Integer]]      | Easy       |
-| [[./problems/problem-70.py][70. Climbing Stairs]]       | Easy       |
-| [[./problems/problem-206.py][206. Reverse Linked List]] | Easy       |
+| Title                                 | Difficulty |
+|---------------------------------------+------------|
+| [[./problems/problem-13.py][13. Roman to Integer]]                  | Easy       |
+| [[./problems/problem-70.py][70. Climbing Stairs]]                   | Easy       |
+| [[./problems/problem-160.py][160. Intersection of Two Linked Lists]] | Easy       |
+| [[./problems/problem-206.py][206. Reverse Linked List]]              | Easy       |
