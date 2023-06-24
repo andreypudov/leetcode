@@ -1,9 +1,13 @@
-from core.list import ListNode
-from helpers.list import ListHelper
 from typing import Optional
 
+from core.list import ListNode
+from helpers.list import ListHelper
+
+
 class Solution:
-    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
+    def getIntersectionNode(
+        self, headA: ListNode, headB: ListNode
+    ) -> Optional[ListNode]:
         headA, headB = self.truncateSameLength(headA, headB)
 
         while headA:
@@ -12,7 +16,9 @@ class Solution:
             headA = headA.next
             headB = headB.next
 
-    def truncateSameLength(self, headA: ListNode, headB: ListNode) -> tuple[ListNode, ListNode]:
+    def truncateSameLength(
+        self, headA: ListNode, headB: ListNode
+    ) -> tuple[ListNode, ListNode]:
         lengthA = self.getListLength(headA)
         lengthB = self.getListLength(headB)
 
@@ -38,7 +44,7 @@ class Solution:
             else:
                 return False
 
-        return headA == None and headB == None
+        return headA is None and headB is None
 
     def getListLength(self, head: ListNode) -> int:
         length = 0
@@ -49,9 +55,10 @@ class Solution:
 
         return length
 
+
 helper = ListHelper()
-headA = helper.makeList([4,1,8,4,5])
-headB = helper.makeList([5,6,1,8,4,5])
+headA = helper.makeList([4, 1, 8, 4, 5])
+headB = helper.makeList([5, 6, 1, 8, 4, 5])
 
 helper.printList(headA)
 helper.printList(headB)
@@ -59,4 +66,3 @@ helper.printList(headB)
 solution = Solution()
 intersectNode = solution.getIntersectionNode(headA, headB)
 helper.printList(intersectNode)
-

@@ -1,5 +1,7 @@
-from core.list import ListNode
 from typing import Optional
+
+from core.list import ListNode
+
 
 class ListHelper:
     def makeList(self, array) -> ListNode:
@@ -16,8 +18,8 @@ class ListHelper:
         return head
 
     def printList(self, head: Optional[ListNode]):
-        print("[", end = " ")
+        print("[", end=" ")
         while head:
-            print(head.val, end = " ")
+            print(head.val, end=" ")
             head = head.next
         print("]")

@@ -17,43 +17,43 @@ class Solution:
         idx = 0
         while idx < len(s):
             next_pair = self.getNextToken(s, idx)
-            if next_pair[0] == 'M':
+            if next_pair[0] == "M":
                 number += 1000
                 idx += 1
-            elif next_pair == 'CM':
-                number +=900
+            elif next_pair == "CM":
+                number += 900
                 idx += 2
-            elif next_pair[0] == 'D':
+            elif next_pair[0] == "D":
                 number += 500
                 idx += 1
-            elif next_pair == 'CD':
+            elif next_pair == "CD":
                 number += 400
                 idx += 2
-            elif next_pair[0] == 'C':
+            elif next_pair[0] == "C":
                 number += 100
                 idx += 1
-            elif next_pair == 'XC':
+            elif next_pair == "XC":
                 number += 90
                 idx += 2
-            elif next_pair[0] == 'L':
+            elif next_pair[0] == "L":
                 number += 50
                 idx += 1
-            elif next_pair == 'XL':
+            elif next_pair == "XL":
                 number += 40
                 idx += 2
-            elif next_pair[0] == 'X':
+            elif next_pair[0] == "X":
                 number += 10
                 idx += 1
-            elif next_pair == 'IX':
+            elif next_pair == "IX":
                 number += 9
                 idx += 2
-            elif next_pair[0] == 'V':
+            elif next_pair[0] == "V":
                 number += 5
                 idx += 1
-            elif next_pair == 'IV':
+            elif next_pair == "IV":
                 number += 4
                 idx += 2
-            elif next_pair[0] == 'I':
+            elif next_pair[0] == "I":
                 number += 1
                 idx += 1
         return number
@@ -61,6 +61,6 @@ class Solution:
     def getNextToken(self, s, pos):
         lenght = len(s)
         if lenght - pos >= 2:
-            return s[pos:pos+2]
+            return s[pos : pos + 2]
         else:
-            return s[pos:pos+1]
+            return s[pos : pos + 1]

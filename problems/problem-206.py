@@ -1,6 +1,8 @@
+from typing import Optional
+
 from core.list import ListNode
 from helpers.list import ListHelper
-from typing import Optional
+
 
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
@@ -18,6 +20,7 @@ class Solution:
             current = next
 
         return previous
+
 
 helper = ListHelper()
 list = helper.makeList([1, 2, 3, 4, 5])
