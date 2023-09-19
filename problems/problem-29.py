@@ -53,7 +53,7 @@ class Solution:
 
         while multiplier <= halfDividend:
             multiplier += multiplier
-            quantity *= 2
+            quantity = self.double(quantity)
             cache[multiplier] = quantity
 
         dividend -= multiplier
