@@ -44,26 +44,31 @@ class Solution:
 
         return division
 
-    def multiplicationAscent(self, dividend: int, divisor: int) -> dict[int, int]:
+    def multiplicationAscent(self, dividend: int, divisor: int) -> int:
         multiplier = divisor
         quantity = 1
         halfDividend = self.half(dividend)
 
-        cache = {multiplier: quantity}
+        stack = [(multiplier, quantity)]
 
         while multiplier <= halfDividend:
             multiplier += multiplier
             quantity = self.double(quantity)
-            cache[multiplier] = quantity
+            stack.append((multiplier, quantity))
 
         dividend -= multiplier
         while dividend >= divisor:
-            values = max(filter(lambda key: key[0] <= dividend, cache.items()))
-            cache[values[0]] = values[1]
-            dividend -= values[0]
-            quantity += values[1]
+            pair = self.getMaxPair(stack, dividend)
+            dividend -= pair[0]
+            quantity += pair[1]
 
         return quantity
+
+    def getMaxPair(self, stack: list[(int, int)], dividend: int) -> (int, int):
+        while stack:
+            pair = stack.pop()
+            if pair[0] <= dividend:
+                return pair
 
     def abs(self, number: int) -> int:
         return number if number >= 0 else -number
@@ -75,20 +80,20 @@ class Solution:
         return number >> 1
 
 
-instance = Solution()
+sln = Solution()
 
-print("-1 / 1 = -1 =>", instance.divide(-1, 1))
-print("1 / -1 = -1 =>", instance.divide(1, -1))
-print("-1 / -1 = 1 =>", instance.divide(-1, -1))
+print("-1 / 1 = -1 =>", sln.divide(-1, 1))
+print("1 / -1 = -1 =>", sln.divide(1, -1))
+print("-1 / -1 = 1 =>", sln.divide(-1, -1))
 
-print("7 / 2 = 3 =>", instance.divide(7, 2))
-print("4 / 3 = 1 =>", instance.divide(4, 3))
-print("1 / 2 = 0 =>", instance.divide(1, 2))
+print("7 / 2 = 3 =>", sln.divide(7, 2))
+print("4 / 3 = 1 =>", sln.divide(4, 3))
+print("1 / 2 = 0 =>", sln.divide(1, 2))
 
-print("1024 / 3 = 341 =>", instance.divide(1024, 3))
-print("2037 / 3 = 679 =>", instance.divide(2037, 3))
-print("2^32 / 6 = 715827882 =>", instance.divide(2**32, 6))
+print("1024 / 3 = 341 =>", sln.divide(1024, 3))
+print("2037 / 3 = 679 =>", sln.divide(2037, 3))
+print("2^32 / 6 = 715827882 =>", sln.divide(2**32, 6))
 
-print("2147483648 / 1 = 2147483647 =>", instance.divide(2147483648, 1))
-print("-2147483648 / -1 = 2147483647 =>", instance.divide(-2147483648, -1))
-print("-2147483648 / 1 = -2147483648 =>", instance.divide(-2147483648, 1))
+print("2147483648 / 1 = 2147483647 =>", sln.divide(2147483648, 1))
+print("-2147483648 / -1 = 2147483647 =>", sln.divide(-2147483648, -1))
+print("-2147483648 / 1 = -2147483648 =>", sln.divide(-2147483648, 1))
