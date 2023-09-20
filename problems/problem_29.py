@@ -78,22 +78,3 @@ class Solution:
 
     def half(self, number: int) -> int:
         return number >> 1
-
-
-sln = Solution()
-
-print("-1 / 1 = -1 =>", sln.divide(-1, 1))
-print("1 / -1 = -1 =>", sln.divide(1, -1))
-print("-1 / -1 = 1 =>", sln.divide(-1, -1))
-
-print("7 / 2 = 3 =>", sln.divide(7, 2))
-print("4 / 3 = 1 =>", sln.divide(4, 3))
-print("1 / 2 = 0 =>", sln.divide(1, 2))
-
-print("1024 / 3 = 341 =>", sln.divide(1024, 3))
-print("2037 / 3 = 679 =>", sln.divide(2037, 3))
-print("2^32 / 6 = 715827882 =>", sln.divide(2**32, 6))
-
-print("2147483648 / 1 = 2147483647 =>", sln.divide(2147483648, 1))
-print("-2147483648 / -1 = 2147483647 =>", sln.divide(-2147483648, -1))
-print("-2147483648 / 1 = -2147483648 =>", sln.divide(-2147483648, 1))
