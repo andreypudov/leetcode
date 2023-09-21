@@ -46,7 +46,3 @@ class Solution:
             pos *= 10
 
         return number
-
-
-sol = Solution()
-print(sol.reverse(123))

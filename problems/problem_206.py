@@ -4,7 +4,6 @@
 from typing import Optional
 
 from core.list import ListNode
-from helpers.list import ListHelper
 
 
 class Solution:
@@ -23,12 +22,3 @@ class Solution:
             current = next
 
         return previous
-
-
-helper = ListHelper()
-list = helper.makeList([1, 2, 3, 4, 5])
-helper.printList(list)
-
-solution = Solution()
-reservedList = solution.reverseList(list)
-helper.printList(reservedList)
