@@ -9,7 +9,7 @@ class TestCase(unittest.TestCase):
         super(TestCase, self).__init__(*args, **kwargs)
         self.solution = Solution()
 
-    def test_divide(self):
+    def test_addTwoNumbers(self):
         self.addTwoNumbers([2, 4, 3], [5, 6, 4], [7, 0, 8])
         self.addTwoNumbers([0], [0], [0])
         self.addTwoNumbers(
@@ -21,6 +21,7 @@ class TestCase(unittest.TestCase):
 
         l1 = helper.makeList(l1)
         l2 = helper.makeList(l2)
+
         expected = helper.makeList(expected)
         actual = self.solution.addTwoNumbers(l1, l2)
 

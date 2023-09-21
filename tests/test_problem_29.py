@@ -9,6 +9,9 @@ class TestCase(unittest.TestCase):
         self.solution = Solution()
 
     def test_divide(self):
+        assert self.solution.divide(10, 3) == 3
+        assert self.solution.divide(7, -3) == -2
+
         assert self.solution.divide(-1, 1) == -1
         assert self.solution.divide(1, -1) == -1
         assert self.solution.divide(-1, -1) == 1

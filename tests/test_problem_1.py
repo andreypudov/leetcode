@@ -8,7 +8,7 @@ class TestCase(unittest.TestCase):
         super(TestCase, self).__init__(*args, **kwargs)
         self.solution = Solution()
 
-    def test_divide(self):
+    def test_twoSum(self):
         assert self.solution.twoSum([2, 7, 11, 15], 9) == [0, 1]
         assert self.solution.twoSum([3, 2, 4], 6) == [1, 2]
         assert self.solution.twoSum([3, 3], 6) == [0, 1]

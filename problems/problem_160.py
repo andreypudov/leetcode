@@ -31,7 +31,6 @@
 from typing import Optional
 
 from core.list import ListNode
-from helpers.list import ListHelper
 
 
 class Solution:
@@ -84,15 +83,3 @@ class Solution:
             head = head.next
 
         return length
-
-
-helper = ListHelper()
-headA = helper.makeList([4, 1, 8, 4, 5])
-headB = helper.makeList([5, 6, 1, 8, 4, 5])
-
-helper.printList(headA)
-helper.printList(headB)
-
-solution = Solution()
-intersectNode = solution.getIntersectionNode(headA, headB)
-helper.printList(intersectNode)
