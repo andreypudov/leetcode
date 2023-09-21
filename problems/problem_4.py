@@ -2,15 +2,13 @@
 # the median of the two sorted arrays. The overall run time complexity should
 # be O(log (m+n)).
 
-from typing import List
-
 
 class Solution:
-    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+    def findMedianSortedArrays(self, nums1: list[int], nums2: list[int]) -> float:
         merged = self.merge(nums1, nums2)
         return self.getMedian(merged)
 
-    def merge(self, nums1: List[int], nums2: List[int]) -> List[int]:
+    def merge(self, nums1: list[int], nums2: list[int]) -> list[int]:
         merged = []
         i = 0
         j = 0
@@ -32,7 +30,7 @@ class Solution:
 
         return merged
 
-    def getMedian(self, nums: List[int]) -> float:
+    def getMedian(self, nums: list[int]) -> float:
         length = len(nums)
         if length % 2 == 0:
             return (nums[length // 2 - 1] + nums[length // 2]) / 2
