@@ -15,7 +15,7 @@ class TestCase(unittest.TestCase):
         self.assertTrue(self.solution.isMatch("ab", ".*"))
         self.assertTrue(self.solution.isMatch("aab", "c*a*b"))
         self.assertTrue(self.solution.isMatch("aaa", "ab*ac*a"))
-        self.assertFalse(self.solution.isMatch("mississippi", "mis*is*p*."))
+        self.assertFalse(self.solution.isMatch("mississippi", "mis*is*ip*."))
 
     def test_tokenize(self):
         self.assertEqual(self.solution.tokenize("a"), [Token("a", False)])
