@@ -8,18 +8,18 @@
 
 
 class Token:
-    def __init__(self, value: str, is_star: bool):
+    def __init__(self, value: str, isStar: bool):
         self.value = value
-        self.is_star = is_star
+        self.isStar = isStar
 
     def __hash__(self):
-        return hash((self.value, self.is_star))
+        return hash((self.value, self.isStar))
 
     def __eq__(self, other):
-        return self.value == other.value and self.is_star == other.is_star
+        return self.value == other.value and self.isStar == other.isStar
 
     def __str__(self):
-        return f"Token({self.value}, {self.is_star})"
+        return f"Token({self.value}, {self.isStar})"
 
     def __repr__(self):
         return self.__str__()
@@ -35,8 +35,8 @@ class Solution:
         self.str_len = len(s)
         self.ptrn_len = len(tokens)
 
-        print(f"\nstring: {s}")
-        print(f"tokens: {self.toStr(tokens)}")
+        # print(f"\nstring: {s}")
+        # print(f"tokens: {self.toStr(tokens)}")
 
         tokens = self.shiftNotMatched(s, tokens)
         result = self.shift(s, tokens)
@@ -51,72 +51,74 @@ class Solution:
 
     def shift(self, string: str, pattern: list[Token]) -> bool:
         if len(string) == 0 or len(pattern) == 0:
-            print(f"{self.step} End of string or pattern | {string} {pattern}")
+            # print(f"{self.step} End of string or pattern | {string} {pattern}")
             return False
-
-        # self.step += 1
-        # print(f'\n{self.step} BEGIN {string}:{len(string)} {self.toStr(pattern)}:{len(pattern)}')
 
         char = string[0]
         token = pattern[0]
+        patternCompleted = self.isPatternCompleted(pattern[1:])
         print(
             f"{self.step} BEGIN {char} => {token.value} | {self.str_len - len(string)} {self.ptrn_len - len(pattern)}"
         )
 
-        if self.isMatchToken(char, token) and len(string) == 1 and len(pattern) == 1:
-            print(f"{self.step} MATCHED {char} == {token.value}")
+        if (
+            self.isMatchToken(char, token) and len(string) == 1 and patternCompleted
+        ):  # len(pattern) == 1
+            # print(f"{self.step} MATCHED {char} == {token.value}")
             return True
 
         if not self.isMatchToken(char, token):
-            if token.is_star and len(pattern) > 1:
+            if token.isStar and not patternCompleted:
                 return self.shift(string, pattern[1:])
             else:
-                # or len(string) == 1 or len(pattern) == 1:
-                # print(f'{self.step} END {self.isMatchToken(char, token)} | {self.str_len - len(string)} {self.ptrn_len - len(pattern)}')
-                # self.step += 1
                 print(f"{self.step} END {char} != {token.value}")
                 self.step += 1
                 return False
 
-        if token.is_star:
+        if token.isStar:
             for index, char in enumerate(string):
-                print(f"{self.step} -- NEXT in {string} | {index} {char} {token.value}")
+                # print(f"{self.step} -- NEXT in {string} | {index} {char} {token.value}")
                 if self.isMatchToken(char, token):
-                    if len(string) - index == 1:
-                        print(f"{self.step} MATCHED 3")
+                    if len(string) - index == 1 and patternCompleted:
+                        # print(f"{self.step} MATCHED 3")
                         return True
                     if len(pattern) == 1:
-                        print("END OF PATTERN")
-                        self.step += 1
+                        # print("END OF PATTERN")
+                        # self.step += 1
                         continue
-                    # print(f'{self.step} -- matched next {char} => {token.value} | {self.str_len - len(string) + index} {self.ptrn_len - len(pattern)}')
                     new_pattern = pattern
-                    new_pattern[0].is_star = False
+                    new_pattern[0].isStar = False
                     result = self.shift(string[index:], new_pattern)
                     if result:
-                        print(f"{self.step} MATCHED 4")
-                        return True
+                        # print(f"{self.step} MATCHED 4")
+                        return result
                 else:
-                    # print(f'{self.step } -- not matched next {char} => {token.value} | {self.str_len - len(string) + index} {self.ptrn_len - len(pattern)}')
-                    # result = self.shift(string[(index):], pattern[1:])
                     return False
 
-            print(f"{self.step} NOT MATCHED")
-            self.step += 1
+            # print(f"{self.step} NOT MATCHED")
+            # self.step += 1
             return False
         else:
-            # print(f'{self.step } -- single next {self.step} {char} => {token.value} | {self.str_len - len(string) + 1} {self.ptrn_len - len(pattern) + 1}')
             return self.shift(string[1:], pattern[1:])
 
     def isMatchToken(self, char: str, token: Token) -> bool:
         return token.value == char or token.value == "."
+
+    def isPatternCompleted(self, pattern: list[Token]) -> bool:
+        requiredTokens = 0
+
+        for token in pattern:
+            if not token.isStar:
+                requiredTokens += 1
+
+        return requiredTokens == 0
 
     def tokenize(self, pattern: str) -> list[Token]:
         tokens = []
 
         for i in range(len(pattern)):
             if pattern[i] == "*":
-                tokens[-1].is_star = True
+                tokens[-1].isStar = True
             else:
                 tokens.append(Token(pattern[i], False))
 
@@ -125,11 +127,16 @@ class Solution:
     def toStr(self, tokens: list[Token]) -> str:
         result = ""
         for token in tokens:
-            result += f"{token.value + '*' if token.is_star else token.value}"
+            result += f"{token.value + '*' if token.isStar else token.value}"
         return result
 
 
 s = Solution()
+# s.isMatch("a", "ab*")
+# s.isMatch("aa", "a*")
+# s.isMatch("ab", ".*c")
 # s.isMatch("aaa", "ab*ac*a")
 # s.isMatch("aab", "c*a*b")
 # s.isMatch("mississippi", "mis*is*p.")
+s.isMatch("ba", ".*a*a")
+# s.isMatch("bbbba", ".*a*a")

@@ -9,9 +9,12 @@ class TestCase(unittest.TestCase):
         self.solution = Solution()
 
     def test_isMatchs(self):
-        self.assertFalse(self.solution.isMatch("aa", "a"))
         self.assertTrue(self.solution.isMatch("aa", "a*"))
+        self.assertFalse(self.solution.isMatch("aa", "a"))
         self.assertTrue(self.solution.isMatch("ab", ".*"))
+        self.assertFalse(self.solution.isMatch("ab", ".*c"))
+        self.assertTrue(self.solution.isMatch("a", "ab*"))
+        # self.assertTrue(self.solution.isMatch("ba", ".*a*a"))
         self.assertTrue(self.solution.isMatch("aab", "c*a*b"))
         self.assertTrue(self.solution.isMatch("aaa", "ab*ac*a"))
         self.assertTrue(self.solution.isMatch("mississippi", "mis*is*ip*."))
@@ -20,6 +23,7 @@ class TestCase(unittest.TestCase):
         self.assertTrue(self.solution.isMatch("aaa", "a*a"))
         self.assertTrue(self.solution.isMatch("aaa", "ab*a*c*a"))
         self.assertTrue(self.solution.isMatch("mississippi", "m.*si*pp."))
+        # self.assertTrue(self.solution.isMatch("bbbba", ".*a*a"))
 
     def test_tokenize(self):
         self.assertEqual(self.solution.tokenize("a"), [Token("a", False)])
