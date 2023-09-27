@@ -8,14 +8,18 @@ class TestCase(unittest.TestCase):
         super(TestCase, self).__init__(*args, **kwargs)
         self.solution = Solution()
 
-    @unittest.skip("Not implemented")
     def test_isMatchs(self):
         self.assertFalse(self.solution.isMatch("aa", "a"))
         self.assertTrue(self.solution.isMatch("aa", "a*"))
         self.assertTrue(self.solution.isMatch("ab", ".*"))
         self.assertTrue(self.solution.isMatch("aab", "c*a*b"))
         self.assertTrue(self.solution.isMatch("aaa", "ab*ac*a"))
-        self.assertFalse(self.solution.isMatch("mississippi", "mis*is*ip*."))
+        self.assertTrue(self.solution.isMatch("mississippi", "mis*is*ip*."))
+        self.assertFalse(self.solution.isMatch("mississippi", "mis*is*p*."))
+        self.assertTrue(self.solution.isMatch("ac", ".*c"))
+        self.assertTrue(self.solution.isMatch("aaa", "a*a"))
+        self.assertTrue(self.solution.isMatch("aaa", "ab*a*c*a"))
+        self.assertTrue(self.solution.isMatch("mississippi", "m.*si*pp."))
 
     def test_tokenize(self):
         self.assertEqual(self.solution.tokenize("a"), [Token("a", False)])
