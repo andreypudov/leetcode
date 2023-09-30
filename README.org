@@ -11,6 +11,7 @@
 | [[./problems/problem_5.py][5. Longest Palindromic Substring]]                  | Medium     |
 | [[./problems/problem_6.py][6. Zigzag Conversion]]                              | Medium     |
 | [[./problems/problem_7.py][7. Reverse Integer]]                                | Medium     |
+| [[./problems/problem_9.py][9. Palindrome Number]]                              | Easy       |
 | [[./problems/problem_10.py][10. Regular Expression Matching]]                   | Hard       |
 | [[./problems/problem_12.py][12. Integer to Roman]]                              | Medium     |
 | [[./problems/problem_13.py][13. Roman to Integer]]                              | Easy       |
