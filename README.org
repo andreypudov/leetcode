@@ -8,6 +8,8 @@
 | [[./problems/problem_2.py][2. Add Two Numbers]]                                | Medium     |
 | [[./problems/problem_3.py][3. Longest Substring Without Repeating Characters]] | Medium     |
 | [[./problems/problem_4.py][4. Median of Two Sorted Arrays]]                    | Hard       |
+| [[./problems/problem_5.py][5. Longest Palindromic Substring]]                  | Medium     |
+| [[./problems/problem_6.py][6. Zigzag Conversion]]                              | Medium     |
 | [[./problems/problem_7.py][7. Reverse Integer]]                                | Medium     |
 | [[./problems/problem_12.py][12. Integer to Roman]]                              | Medium     |
 | [[./problems/problem_13.py][13. Roman to Integer]]                              | Easy       |
