@@ -25,6 +25,10 @@ class TestCase(unittest.TestCase):
         self.assertTrue(self.solution.isMatch("mississippi", "m.*si*pp."))
         self.assertTrue(self.solution.isMatch("bbbba", ".*a*a"))
         self.assertFalse(self.solution.isMatch("bbab", "b*a*"))
+        self.assertFalse(
+            self.solution.isMatch("aaaaaaaaaaaaaaaaaaab", "a*a*a*a*a*a*a*a*a*a*")
+        )
+        self.assertTrue(self.solution.isMatch("baba", "b*.*"))
 
     def test_tokenize(self):
         self.assertEqual(self.solution.tokenize("a"), [Token("a", False)])

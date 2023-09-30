@@ -34,80 +34,67 @@ class Token:
 
 
 class Solution:
-    step: int = 1
-    str_len: int = 0
-    ptrn_len: int = 0
-
     def isMatch(self, s: str, p: str) -> bool:
         tokens = self.tokenize(p)
-        self.str_len = len(s)
-        self.ptrn_len = len(tokens)
+        tokens = self.removeDuplicateTokens(tokens)
 
-        print(f"\nstring: {s}")
-        print(f"tokens: {self.toStr(tokens)}")
-
-        result = self.shift(s, tokens)
-        print(f"result: {result}")
-        return result
+        return self.shift(s, tokens)
 
     def shift(self, string: str, pattern: list[Token]) -> bool:
-        if len(string) == 0 or len(pattern) == 0:
-            # print(f"{self.step} End of string or pattern | {string} {pattern}")
+        if len(string) == 0 and len(pattern) == 0:
+            return True
+        if len(string) == 0 and self.nonstarlen(pattern) == 0:
+            return True
+        elif len(string) == 0 and len(pattern) != 0:
+            return False
+        elif len(string) != 0 and len(pattern) == 0:
             return False
 
-        char = string[0]
         token = pattern[0]
-        patternCompleted = self.isPatternCompleted(pattern[1:])
-        print(
-            f"{self.step} BEGIN {char} => {token.value} | {self.str_len - len(string)} {self.ptrn_len - len(pattern)}"
-        )
-
-        if self.isMatchToken(char, token) and len(string) == 1 and patternCompleted:
-            return True
-
-        if not self.isMatchToken(char, token):
-            if token.isStar and not patternCompleted:
-                return self.shift(string, pattern[1:])
-            else:
-                print(f"{self.step} END {char} != {token.value}")
-                self.step += 1
-                return False
+        char = string[0]
 
         if token.isStar:
-            for index, char in enumerate(string):
-                if self.isMatchToken(char, token):
-                    if len(string) - index == 0 and patternCompleted:
-                        print(f"TRUE 1 {len(string)} {index}")
-                        return True
-                    if len(pattern) == 1:
-                        continue
-                    new_pattern = pattern
-                    new_pattern[0].isStar = False
-                    result = self.shift(string[index:], new_pattern)
-                    if result is True:
-                        print("TRUE 2")
-                        return result
-
-            if not self.isPatternCompleted(pattern[index:]):
-                result = self.shift(string, pattern[1:])
-                if result is True:
-                    print("TRUE 3")
-                    return result
-            return False
+            if self.match(char, token):
+                return self.shift(string[1:], pattern) or self.shift(
+                    string, pattern[1:]
+                )
+            else:
+                return self.shift(string, pattern[1:])
         else:
-            return self.shift(string[1:], pattern[1:])
+            if self.match(char, token):
+                return self.shift(string[1:], pattern[1:])
+            else:
+                return False
 
-    def isMatchToken(self, char: str, token: Token) -> bool:
-        return token.value == char or token.value == "."
+        return False
 
-    def isPatternCompleted(self, pattern: list[Token]) -> bool:
-        requiredTokens = 0
+    def removeDuplicateTokens(self, tokens: list[Token]) -> list[Token]:
+        result = []
+        previous = tokens[0]
 
-        for token in pattern:
+        result.append(previous)
+
+        for index in range(1, len(tokens)):
+            token = tokens[index]
+            if previous.isStar == token.isStar is True and (
+                previous.value == token.value or previous.value == "."
+            ):
+                continue
+
+            previous = token
+            result.append(token)
+
+        return result
+
+    def match(self, char: str, token: Token) -> bool:
+        return True if char == token.value or token.value == "." else False
+
+    def nonstarlen(self, tokens: list[Token]) -> int:
+        count = 0
+        for token in tokens:
             if not token.isStar:
-                requiredTokens += 1
-
-        return requiredTokens == 0
+                count += 1
+        return count
 
     def tokenize(self, pattern: str) -> list[Token]:
         tokens = []
@@ -119,21 +106,3 @@ class Solution:
                 tokens.append(Token(pattern[i], False))
 
         return tokens
-
-    def toStr(self, tokens: list[Token]) -> str:
-        result = ""
-        for token in tokens:
-            result += f"{token.value + '*' if token.isStar else token.value}"
-        return result
-
-
-s = Solution()
-# s.isMatch("a", "ab*")
-# s.isMatch("aa", "a*")
-# s.isMatch("ab", ".*c")
-# s.isMatch("aaa", "ab*ac*a")
-# s.isMatch("aab", "c*a*b")
-# s.isMatch("mississippi", "mis*is*p.")
-# s.isMatch("ba", ".*a*a")
-# s.isMatch("bbbba", ".*a*a")
-s.isMatch("bbab", "b*a*")

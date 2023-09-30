@@ -9,6 +9,7 @@
 | [[./problems/problem_3.py][3. Longest Substring Without Repeating Characters]] | Medium     |
 | [[./problems/problem_4.py][4. Median of Two Sorted Arrays]]                    | Hard       |
 | [[./problems/problem_7.py][7. Reverse Integer]]                                | Medium     |
+| [[./problems/problem_10.py][10. Regular Expression Matching]]                   | Hard       |
 | [[./problems/problem_12.py][12. Integer to Roman]]                              | Medium     |
 | [[./problems/problem_13.py][13. Roman to Integer]]                              | Easy       |
 | [[./problems/problem_14.py][14. Longest Common Prefix]]                         | Easy       |
