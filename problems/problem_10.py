@@ -6,6 +6,14 @@
 #
 # The matching should cover the entire input string (not partial).
 
+# Algorithm:
+# If token is not star:
+#   if token matches char, then shift both string and pattern
+#   else return False
+# If token is star:
+#   if token matches char, then shift string and keep pattern
+#   else shift pattern and keep string
+
 
 class Token:
     def __init__(self, value: str, isStar: bool):
@@ -35,19 +43,12 @@ class Solution:
         self.str_len = len(s)
         self.ptrn_len = len(tokens)
 
-        # print(f"\nstring: {s}")
-        # print(f"tokens: {self.toStr(tokens)}")
+        print(f"\nstring: {s}")
+        print(f"tokens: {self.toStr(tokens)}")
 
-        tokens = self.shiftNotMatched(s, tokens)
         result = self.shift(s, tokens)
         print(f"result: {result}")
         return result
-
-    def shiftNotMatched(self, string: str, pattern: list[Token]) -> list[Token]:
-        for index, token in enumerate(pattern):
-            if self.isMatchToken(string[0], token):
-                return pattern[index:]
-        return []
 
     def shift(self, string: str, pattern: list[Token]) -> bool:
         if len(string) == 0 or len(pattern) == 0:
@@ -61,10 +62,7 @@ class Solution:
             f"{self.step} BEGIN {char} => {token.value} | {self.str_len - len(string)} {self.ptrn_len - len(pattern)}"
         )
 
-        if (
-            self.isMatchToken(char, token) and len(string) == 1 and patternCompleted
-        ):  # len(pattern) == 1
-            # print(f"{self.step} MATCHED {char} == {token.value}")
+        if self.isMatchToken(char, token) and len(string) == 1 and patternCompleted:
             return True
 
         if not self.isMatchToken(char, token):
@@ -77,26 +75,24 @@ class Solution:
 
         if token.isStar:
             for index, char in enumerate(string):
-                # print(f"{self.step} -- NEXT in {string} | {index} {char} {token.value}")
                 if self.isMatchToken(char, token):
-                    if len(string) - index == 1 and patternCompleted:
-                        # print(f"{self.step} MATCHED 3")
+                    if len(string) - index == 0 and patternCompleted:
+                        print(f"TRUE 1 {len(string)} {index}")
                         return True
                     if len(pattern) == 1:
-                        # print("END OF PATTERN")
-                        # self.step += 1
                         continue
                     new_pattern = pattern
                     new_pattern[0].isStar = False
                     result = self.shift(string[index:], new_pattern)
-                    if result:
-                        # print(f"{self.step} MATCHED 4")
+                    if result is True:
+                        print("TRUE 2")
                         return result
-                else:
-                    return False
 
-            # print(f"{self.step} NOT MATCHED")
-            # self.step += 1
+            if not self.isPatternCompleted(pattern[index:]):
+                result = self.shift(string, pattern[1:])
+                if result is True:
+                    print("TRUE 3")
+                    return result
             return False
         else:
             return self.shift(string[1:], pattern[1:])
@@ -138,5 +134,6 @@ s = Solution()
 # s.isMatch("aaa", "ab*ac*a")
 # s.isMatch("aab", "c*a*b")
 # s.isMatch("mississippi", "mis*is*p.")
-s.isMatch("ba", ".*a*a")
+# s.isMatch("ba", ".*a*a")
 # s.isMatch("bbbba", ".*a*a")
+s.isMatch("bbab", "b*a*")
