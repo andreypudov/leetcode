@@ -9,8 +9,12 @@ class TestCase(unittest.TestCase):
         self.solution = Solution()
 
     def test_longestCommonPrefix(self):
-        assert self.solution.longestCommonPrefix(["flower", "flow", "flight"]) == "fl"
-        assert self.solution.longestCommonPrefix(["dog", "racecar", "car"]) == ""
+        self.assertEqual(
+            self.solution.longestCommonPrefix(["flower", "flow", "flight"]), "fl"
+        )
+        self.assertEqual(
+            self.solution.longestCommonPrefix(["dog", "racecar", "car"]), ""
+        )
 
 
 if __name__ == "__main__":
