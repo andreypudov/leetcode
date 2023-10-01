@@ -1,3 +1,5 @@
+# 12. Integer to Roman
+#
 # Roman numerals are represented by seven different symbols: I, V, X, L, C, D
 # and M.
 #
@@ -25,6 +27,10 @@
 # - C can be placed before D (500) and M (1000) to make 400 and 900.
 #
 # Given an integer, convert it to a roman numeral.
+#
+# Constraints:
+#
+# - 1 <= num <= 3999
 
 
 class Solution:
