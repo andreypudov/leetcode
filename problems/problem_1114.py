@@ -1,3 +1,5 @@
+# 1114. Print in Order
+#
 # Suppose we have a class:
 #
 # public class Foo {
@@ -16,6 +18,11 @@
 # We do not know how the threads will be scheduled in the operating system, even
 # though the numbers in the input seem to imply the ordering. The input format
 # you see is mainly to ensure our tests' comprehensiveness.
+#
+# Constraints:
+#
+# - nums is a permutation of [1, 2, 3].
+
 
 from threading import Lock
 from typing import Callable

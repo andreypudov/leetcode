@@ -1,3 +1,5 @@
+# 29. Divide Two Integers
+#
 # Given two integers dividend and divisor, divide two integers without using
 # multiplication, division, and mod operator.
 #
@@ -11,6 +13,11 @@
 # within the 32-bit signed integer range: [−2^31, 2^31 − 1]. For this problem,
 # if the quotient is strictly greater than 2^31 - 1, then return 2^31 - 1, and
 # if the quotient is strictly less than -2^31, then return -2^31.
+#
+# Constraints:
+#
+# - -2^31 <= dividend, divisor <= 2^31 - 1
+# - divisor != 0
 
 
 class Solution:
