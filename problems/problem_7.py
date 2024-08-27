@@ -13,7 +13,7 @@ class Solution:
         if x == 0:
             return 0
 
-        getReversedDigits = self.getReversedDigits(abs(x))
+        getReversedDigits = self.__get_reversedDigits(abs(x))
         number = self.getNumber(getReversedDigits)
         number = number * (-1) if x < 0 else number
 
@@ -22,7 +22,7 @@ class Solution:
 
         return number
 
-    def getReversedDigits(self, x: int) -> int:
+    def __get_reversedDigits(self, x: int) -> int:
         numDigits = math.floor(math.log10(abs(x))) + 1
         digitList = [0] * numDigits
         currentPos = 0

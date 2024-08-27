@@ -36,14 +36,14 @@ class Token:
 class Solution:
     def isMatch(self, s: str, p: str) -> bool:
         tokens = self.tokenize(p)
-        tokens = self.removeDuplicateTokens(tokens)
+        tokens = self.__remove_duplicate_tokens(tokens)
 
-        return self.shift(s, tokens)
+        return self.__shift(s, tokens)
 
-    def shift(self, string: str, pattern: list[Token]) -> bool:
+    def __shift(self, string: str, pattern: list[Token]) -> bool:
         if len(string) == 0 and len(pattern) == 0:
             return True
-        if len(string) == 0 and self.nonstarlen(pattern) == 0:
+        if len(string) == 0 and self.__nonstarlen(pattern) == 0:
             return True
         elif len(string) == 0 and len(pattern) != 0:
             return False
@@ -54,21 +54,21 @@ class Solution:
         char = string[0]
 
         if token.isStar:
-            if self.match(char, token):
-                return self.shift(string[1:], pattern) or self.shift(
+            if self.__match(char, token):
+                return self.__shift(string[1:], pattern) or self.__shift(
                     string, pattern[1:]
                 )
             else:
-                return self.shift(string, pattern[1:])
+                return self.__shift(string, pattern[1:])
         else:
-            if self.match(char, token):
-                return self.shift(string[1:], pattern[1:])
+            if self.__match(char, token):
+                return self.__shift(string[1:], pattern[1:])
             else:
                 return False
 
         return False
 
-    def removeDuplicateTokens(self, tokens: list[Token]) -> list[Token]:
+    def __remove_duplicate_tokens(self, tokens: list[Token]) -> list[Token]:
         result = []
         previous = tokens[0]
 
@@ -86,10 +86,10 @@ class Solution:
 
         return result
 
-    def match(self, char: str, token: Token) -> bool:
+    def __match(self, char: str, token: Token) -> bool:
         return True if char == token.value or token.value == "." else False
 
-    def nonstarlen(self, tokens: list[Token]) -> int:
+    def __nonstarlen(self, tokens: list[Token]) -> int:
         count = 0
         for token in tokens:
             if not token.isStar:

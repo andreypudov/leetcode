@@ -16,8 +16,8 @@
 class Solution:
     def divide(self, dividend: int, divisor: int) -> int:
         sign = -1 if (dividend < 0) ^ (divisor < 0) else 1
-        dividend = self.abs(dividend)
-        divisor = self.abs(divisor)
+        dividend = self.__abs(dividend)
+        divisor = self.__abs(divisor)
 
         if dividend == 0:
             return 0
@@ -32,7 +32,9 @@ class Solution:
             return 0
 
         division = (
-            self.multiplicationAscent(dividend, divisor) if divisor != 1 else dividend
+            self.__multiplication_ascent(dividend, divisor)
+            if divisor != 1
+            else dividend
         )
         division = division if sign > 0 else -division
 
@@ -44,37 +46,37 @@ class Solution:
 
         return division
 
-    def multiplicationAscent(self, dividend: int, divisor: int) -> int:
+    def __multiplication_ascent(self, dividend: int, divisor: int) -> int:
         multiplier = divisor
         quantity = 1
-        halfDividend = self.half(dividend)
+        halfDividend = self.__half(dividend)
 
         stack = [(multiplier, quantity)]
 
         while multiplier <= halfDividend:
             multiplier += multiplier
-            quantity = self.double(quantity)
+            quantity = self.__double(quantity)
             stack.append((multiplier, quantity))
 
         dividend -= multiplier
         while dividend >= divisor:
-            pair = self.getMaxPair(stack, dividend)
+            pair = self.__get_max_pair(stack, dividend)
             dividend -= pair[0]
             quantity += pair[1]
 
         return quantity
 
-    def getMaxPair(self, stack: list[(int, int)], dividend: int) -> (int, int):
+    def __get_max_pair(self, stack: list[(int, int)], dividend: int) -> (int, int):
         while stack:
             pair = stack.pop()
             if pair[0] <= dividend:
                 return pair
 
-    def abs(self, number: int) -> int:
+    def __abs(self, number: int) -> int:
         return number if number >= 0 else -number
 
-    def double(self, number: int) -> int:
+    def __double(self, number: int) -> int:
         return number << 1
 
-    def half(self, number: int) -> int:
+    def __half(self, number: int) -> int:
         return number >> 1

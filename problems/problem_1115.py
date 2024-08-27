@@ -21,7 +21,7 @@
 #
 # Modify the given program to output "foobar" n times.
 
-from threading import Barrier, Event
+from threading import Event
 from typing import Callable
 
 
