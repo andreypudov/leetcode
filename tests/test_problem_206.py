@@ -14,7 +14,7 @@ class TestCase(unittest.TestCase):
         self.reverseList([1, 2], [2, 1])
         self.reverseList([], [])
 
-    def reverseList(self, head: [int], expected: [int]):
+    def reverseList(self, head: list[int], expected: list[int]):
         helper = ListHelper()
 
         head = helper.makeList(head)
@@ -22,7 +22,3 @@ class TestCase(unittest.TestCase):
         actual = self.solution.reverseList(head)
 
         assert helper.compareList(expected, actual)
-
-
-if __name__ == "__main__":
-    unittest.main()

@@ -20,7 +20,3 @@ class TestCase(unittest.TestCase):
         self.assertEqual(self.solution.intToRoman(99), "XCIX")
         self.assertEqual(self.solution.intToRoman(494), "CDXCIV")
         self.assertEqual(self.solution.intToRoman(999), "CMXCIX")
-
-
-if __name__ == "__main__":
-    unittest.main()

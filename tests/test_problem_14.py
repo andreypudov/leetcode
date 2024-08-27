@@ -15,7 +15,3 @@ class TestCase(unittest.TestCase):
         self.assertEqual(
             self.solution.longestCommonPrefix(["dog", "racecar", "car"]), ""
         )
-
-
-if __name__ == "__main__":
-    unittest.main()

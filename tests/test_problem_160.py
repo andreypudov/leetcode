@@ -1,7 +1,5 @@
 import unittest
-from typing import Optional
 
-from problems.core.list import ListNode
 from problems.helpers.list import ListHelper
 from problems.problem_160 import Solution
 
@@ -16,17 +14,15 @@ class TestCase(unittest.TestCase):
         self.getIntersectionNode([1, 9, 1, 2, 4], [3, 2, 4], [2, 4])
         self.getIntersectionNode([2, 6, 4], [1, 5], [])
 
-    def getIntersectionNode(self, headA: [int], headB: [int], expected: [int]):
+    def getIntersectionNode(
+        self, head_a: list[int], head_b: list[int], expected: list[int]
+    ):
         helper = ListHelper()
 
-        headA = helper.makeList(headA)
-        headB = helper.makeList(headB)
+        head_a = helper.makeList(head_a)
+        head_b = helper.makeList(head_b)
 
         expected = helper.makeList(expected)
-        actual = self.solution.getIntersectionNode(headA, headB)
+        actual = self.solution.getIntersectionNode(head_a, head_b)
 
         assert helper.compareList(expected, actual)
-
-
-if __name__ == "__main__":
-    unittest.main()

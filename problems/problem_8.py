@@ -35,5 +35,5 @@
 
 
 class Solution:
-    def myAtoi(self, s: str) -> int:
+    def myAtoi(self, string: str) -> int:
         pass

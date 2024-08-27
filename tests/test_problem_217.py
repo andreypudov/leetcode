@@ -12,7 +12,3 @@ class TestCase(unittest.TestCase):
         self.assertTrue(self.solution.containsDuplicate([1, 2, 3, 1]))
         self.assertFalse(self.solution.containsDuplicate([1, 2, 3, 4]))
         self.assertTrue(self.solution.containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2]))
-
-
-if __name__ == "__main__":
-    unittest.main()

@@ -11,7 +11,3 @@ class TestCase(unittest.TestCase):
     def test_twoSum(self):
         self.assertEqual(self.solution.longestPalindrome("babad"), "bab")
         self.assertEqual(self.solution.longestPalindrome("cbbd"), "bb")
-
-
-if __name__ == "__main__":
-    unittest.main()
