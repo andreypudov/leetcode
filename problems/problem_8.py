@@ -36,4 +36,31 @@
 
 class Solution:
     def myAtoi(self, string: str) -> int:
-        pass
+        string = self.__trim(string)
+        if not string:
+            return 0
+
+        is_negative = False
+        if string[0] == "-":
+            is_negative = True
+            string = string[1:]
+        elif string[0] == "+":
+            string = string[1:]
+
+        result = self.__parse(string, is_negative)
+        return result
+
+    def __trim(self, string: str) -> str:
+        for index, character in enumerate(string):
+            if character != " ":
+                return string[index:]
+
+    def __parse(self, string: str, is_negative: bool) -> int:
+        result = 0
+
+        for character in string:
+            if not character.isdigit():
+                break
+            result = result * 10 + int(character)
+
+        return max(-(2**31), -result) if is_negative else min(2**31 - 1, result)

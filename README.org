@@ -11,6 +11,7 @@
 | [[./problems/problem_5.py][5. Longest Palindromic Substring]]                  | Medium     |
 | [[./problems/problem_6.py][6. Zigzag Conversion]]                              | Medium     |
 | [[./problems/problem_7.py][7. Reverse Integer]]                                | Medium     |
+| [[./problems/problem_8.py][8. String to Integer (atoi)]]                       | Medium     |
 | [[./problems/problem_9.py][9. Palindrome Number]]                              | Easy       |
 | [[./problems/problem_10.py][10. Regular Expression Matching]]                   | Hard       |
 | [[./problems/problem_12.py][12. Integer to Roman]]                              | Medium     |
@@ -33,7 +34,7 @@ pip install -r requirements.txt
 pre-commit install
 #+end_src
 
-** Tests
+** Testing
 
 #+begin_src shell
 python -m unittest
