@@ -10,13 +10,13 @@ class Solution:
         same_str = ""
 
         for i in range(0, len(first_str)):
-            if not self.isSameSymbol(i, strs):
+            if not self.__is_same_symbol(i, strs):
                 break
             same_str += first_str[i]
 
         return same_str
 
-    def isSameSymbol(self, indx, strs):
+    def __is_same_symbol(self, indx, strs):
         symbol = strs[0][indx]
 
         for string in strs:

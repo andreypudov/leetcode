@@ -7,7 +7,7 @@ class Solution:
         length = 0
 
         for index in range(len(s)):
-            cur_palindrom = self.getPalindrom(s[index:])
+            cur_palindrom = self.__get_palindrom(s[index:])
             cur_length = len(cur_palindrom)
 
             if cur_length > length:
@@ -16,16 +16,16 @@ class Solution:
 
         return palindrom
 
-    def getPalindrom(self, s: str) -> str:
+    def __get_palindrom(self, s: str) -> str:
         palindrom = ""
 
         for index in range(len(s), 0, -1):
             sub = s[0:index]
-            if self.isPalindrom(sub):
+            if self.__is_palindrom(sub):
                 palindrom = sub
                 break
 
         return palindrom
 
-    def isPalindrom(self, s: str) -> bool:
+    def __is_palindrom(self, s: str) -> bool:
         return s == s[::-1]

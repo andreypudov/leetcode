@@ -24,8 +24,17 @@
 | [[./problems/problem_1114.py][1114. Print in Order]]                              | Easy       |
 | [[./problems/problem_1115.py][1115. Print FooBar Alternately]]                    | Medium     |
 
+** Development
+
+#+begin_src shell
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+pre-commit install
+#+end_src
+
 ** Tests
 
 #+begin_src shell
-python3 -m unittest
+python -m unittest
 #+end_src

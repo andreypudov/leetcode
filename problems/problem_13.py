@@ -32,7 +32,7 @@ class Solution:
         number = 0
         idx = 0
         while idx < len(s):
-            next_pair = self.getNextToken(s, idx)
+            next_pair = self.__get_next_token(s, idx)
             if next_pair[0] == "M":
                 number += 1000
                 idx += 1
@@ -74,7 +74,7 @@ class Solution:
                 idx += 1
         return number
 
-    def getNextToken(self, s, pos):
+    def __get_next_token(self, s, pos):
         lenght = len(s)
         if lenght - pos >= 2:
             return s[pos : pos + 2]
