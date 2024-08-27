@@ -3,29 +3,29 @@
 
 class Solution:
     def longestPalindrome(self, s: str) -> str:
-        palindrom = ""
+        palindrome = ""
         length = 0
 
         for index in range(len(s)):
-            cur_palindrom = self.__get_palindrom(s[index:])
-            cur_length = len(cur_palindrom)
+            cur_palindrome = self.__get_palindrome(s[index:])
+            cur_length = len(cur_palindrome)
 
             if cur_length > length:
-                palindrom = cur_palindrom
+                palindrome = cur_palindrome
                 length = cur_length
 
-        return palindrom
+        return palindrome
 
-    def __get_palindrom(self, s: str) -> str:
-        palindrom = ""
+    def __get_palindrome(self, s: str) -> str:
+        palindrome = ""
 
         for index in range(len(s), 0, -1):
             sub = s[0:index]
-            if self.__is_palindrom(sub):
-                palindrom = sub
+            if self.__is_palindrome(sub):
+                palindrome = sub
                 break
 
-        return palindrom
+        return palindrome
 
-    def __is_palindrom(self, s: str) -> bool:
+    def __is_palindrome(self, s: str) -> bool:
         return s == s[::-1]

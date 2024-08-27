@@ -23,23 +23,23 @@ from typing import Callable
 
 class Foo:
     def __init__(self):
-        self.firstJobDone = Lock()
-        self.secondJobDone = Lock()
-        self.firstJobDone.acquire()
-        self.secondJobDone.acquire()
+        self.first_job_done = Lock()
+        self.second_job_done = Lock()
+        self.first_job_done.acquire()
+        self.second_job_done.acquire()
 
-    def first(self, printFirst: "Callable[[], None]") -> None:
+    def first(self, print_first: "Callable[[], None]") -> None:
         # printFirst() outputs "first". Do not change or remove this line.
-        printFirst()
-        self.firstJobDone.release()
+        print_first()
+        self.first_job_done.release()
 
-    def second(self, printSecond: "Callable[[], None]") -> None:
+    def second(self, print_second: "Callable[[], None]") -> None:
         # printSecond() outputs "second". Do not change or remove this line.
-        with self.firstJobDone:
-            printSecond()
-            self.secondJobDone.release()
+        with self.first_job_done:
+            print_second()
+            self.second_job_done.release()
 
-    def third(self, printThird: "Callable[[], None]") -> None:
+    def third(self, print_third: "Callable[[], None]") -> None:
         # printThird() outputs "third". Do not change or remove this line.
-        with self.secondJobDone:
-            printThird()
+        with self.second_job_done:
+            print_third()

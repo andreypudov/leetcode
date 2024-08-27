@@ -49,11 +49,11 @@ class Solution:
     def __multiplication_ascent(self, dividend: int, divisor: int) -> int:
         multiplier = divisor
         quantity = 1
-        halfDividend = self.__half(dividend)
+        half_dividend = self.__half(dividend)
 
         stack = [(multiplier, quantity)]
 
-        while multiplier <= halfDividend:
+        while multiplier <= half_dividend:
             multiplier += multiplier
             quantity = self.__double(quantity)
             stack.append((multiplier, quantity))
@@ -66,7 +66,7 @@ class Solution:
 
         return quantity
 
-    def __get_max_pair(self, stack: list[(int, int)], dividend: int) -> (int, int):
+    def __get_max_pair(self, stack: list[(int, int)], dividend: int) -> tuple[int, int]:
         while stack:
             pair = stack.pop()
             if pair[0] <= dividend:
