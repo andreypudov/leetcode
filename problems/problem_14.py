@@ -18,20 +18,20 @@ class Solution:
         first_str = strs[0]
         same_str = ""
 
-        for i in range(0, len(first_str)):
-            if not self.isSameSymbol(i, strs):
+        for index in range(0, len(first_str)):
+            if not self.__is_same_symbol(index, strs):
                 break
-            same_str += first_str[i]
+            same_str += first_str[index]
 
         return same_str
 
-    def isSameSymbol(self, indx, strs):
-        symbol = strs[0][indx]
+    def __is_same_symbol(self, index, strs):
+        symbol = strs[0][index]
 
         for string in strs:
-            if len(string) < indx + 1:
+            if len(string) < index + 1:
                 return False
-            if string[indx] != symbol:
+            if string[index] != symbol:
                 return False
 
         return True

@@ -51,45 +51,45 @@ class Solution:
     def getIntersectionNode(
         self, headA: ListNode, headB: ListNode
     ) -> Optional[ListNode]:
-        headA, headB = self.truncateSameLength(headA, headB)
+        headA, headB = self.__truncate_same_length(headA, headB)
 
         while headA:
-            if self.isIntersected(headA, headB):
+            if self.__is_intersected(headA, headB):
                 return headA
             headA = headA.next
             headB = headB.next
 
-    def truncateSameLength(
+    def __truncate_same_length(
         self, headA: ListNode, headB: ListNode
     ) -> tuple[ListNode, ListNode]:
-        lengthA = self.getListLength(headA)
-        lengthB = self.getListLength(headB)
+        length_a = self.__get_list_length(headA)
+        length_b = self.__get_list_length(headB)
 
-        if lengthA > lengthB:
-            headA = self.truncateToLength(headA, lengthA - lengthB)
-        elif lengthA < lengthB:
-            headB = self.truncateToLength(headB, lengthB - lengthA)
+        if length_a > length_b:
+            headA = self.__truncate_to_length(headA, length_a - length_b)
+        elif length_a < length_b:
+            headB = self.__truncate_to_length(headB, length_b - length_a)
 
         return headA, headB
 
-    def truncateToLength(self, head: ListNode, skip: int) -> ListNode:
+    def __truncate_to_length(self, head: ListNode, skip: int) -> ListNode:
         while skip:
             head = head.next
             skip -= 1
 
         return head
 
-    def isIntersected(self, headA: ListNode, headB: ListNode) -> bool:
-        while headA and headB:
-            if headA.val == headB.val:
-                headA = headA.next
-                headB = headB.next
+    def __is_intersected(self, head_a: ListNode, head_b: ListNode) -> bool:
+        while head_a and head_b:
+            if head_a.val == head_b.val:
+                head_a = head_a.next
+                head_b = head_b.next
             else:
                 return False
 
-        return headA is None and headB is None
+        return head_a is None and head_b is None
 
-    def getListLength(self, head: ListNode) -> int:
+    def __get_list_length(self, head: ListNode) -> int:
         length = 0
 
         while head:

@@ -16,10 +16,10 @@
 
 class Solution:
     def findMedianSortedArrays(self, nums1: list[int], nums2: list[int]) -> float:
-        merged = self.merge(nums1, nums2)
-        return self.getMedian(merged)
+        merged = self.__merge(nums1, nums2)
+        return self.__get_median(merged)
 
-    def merge(self, nums1: list[int], nums2: list[int]) -> list[int]:
+    def __merge(self, nums1: list[int], nums2: list[int]) -> list[int]:
         merged = []
         i = 0
         j = 0
@@ -41,7 +41,7 @@ class Solution:
 
         return merged
 
-    def getMedian(self, nums: list[int]) -> float:
+    def __get_median(self, nums: list[int]) -> float:
         length = len(nums)
         if length % 2 == 0:
             return (nums[length // 2 - 1] + nums[length // 2]) / 2

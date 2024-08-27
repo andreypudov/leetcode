@@ -28,30 +28,30 @@
 # - 1 <= n <= 1000
 
 
-from threading import Barrier, Event
+from threading import Event
 from typing import Callable
 
 
 class FooBar:
     def __init__(self, n):
         self.n = n
-        self.canBar = Event()
-        self.canBar.clear()
-        self.canFoo = Event()
-        self.canFoo.set()
+        self.can_bar = Event()
+        self.can_bar.clear()
+        self.can_foo = Event()
+        self.can_foo.set()
 
-    def foo(self, printFoo: "Callable[[], None]") -> None:
-        for i in range(self.n):
-            self.canFoo.wait()
+    def foo(self, print_foo: "Callable[[], None]") -> None:
+        for _ in range(self.n):
+            self.can_foo.wait()
             # printFoo() outputs "foo". Do not change or remove this line.
-            printFoo()
-            self.canFoo.clear()
-            self.canBar.set()
+            print_foo()
+            self.can_foo.clear()
+            self.can_bar.set()
 
-    def bar(self, printBar: "Callable[[], None]") -> None:
-        for i in range(self.n):
-            self.canBar.wait()
+    def bar(self, print_bar: "Callable[[], None]") -> None:
+        for _ in range(self.n):
+            self.can_bar.wait()
             # printBar() outputs "bar". Do not change or remove this line.
-            printBar()
-            self.canBar.clear()
-            self.canFoo.set()
+            print_bar()
+            self.can_bar.clear()
+            self.can_foo.set()
