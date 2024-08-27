@@ -12,7 +12,3 @@ class TestCase(unittest.TestCase):
         self.assertEqual(self.solution.reverse(123), 321)
         self.assertEqual(self.solution.reverse(-123), -321)
         self.assertEqual(self.solution.reverse(120), 21)
-
-
-if __name__ == "__main__":
-    unittest.main()

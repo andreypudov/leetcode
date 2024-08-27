@@ -12,7 +12,3 @@ class TestCase(unittest.TestCase):
         self.assertEqual(self.solution.convert("PAYPALISHIRING", 3), "PAHNAPLSIIGYIR")
         self.assertEqual(self.solution.convert("PAYPALISHIRING", 4), "PINALSIGYAHRPI")
         self.assertEqual(self.solution.convert("A", 1), "A")
-
-
-if __name__ == "__main__":
-    unittest.main()

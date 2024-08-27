@@ -1,3 +1,5 @@
+# 10. Regular Expression Matching
+#
 # Given an input string s and a pattern p, implement regular expression matching
 # with support for '.' and '*' where:
 #
@@ -5,14 +7,15 @@
 # - '*' Matches zero or more of the preceding element.
 #
 # The matching should cover the entire input string (not partial).
-
-# Algorithm:
-# If token is not star:
-#   if token matches char, then shift both string and pattern
-#   else return False
-# If token is star:
-#   if token matches char, then shift string and keep pattern
-#   else shift pattern and keep string
+#
+# Constraints:
+#
+# - 1 <= s.length <= 20
+# - 1 <= p.length <= 20
+# - s contains only lowercase English letters.
+# - p contains only lowercase English letters, '.', and '*'.
+# - It is guaranteed for each appearance of the character '*', there will be a
+#   previous valid character to match.
 
 
 class Token:

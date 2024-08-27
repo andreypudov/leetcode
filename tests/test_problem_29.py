@@ -27,7 +27,3 @@ class TestCase(unittest.TestCase):
         self.assertEqual(self.solution.divide(2147483648, 1), 2147483647)
         self.assertEqual(self.solution.divide(-2147483648, -1), 2147483647)
         self.assertEqual(self.solution.divide(-2147483648, 1), -2147483648)
-
-
-if __name__ == "__main__":
-    unittest.main()

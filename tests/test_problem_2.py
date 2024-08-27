@@ -16,7 +16,7 @@ class TestCase(unittest.TestCase):
             [9, 9, 9, 9, 9, 9, 9], [9, 9, 9, 9], [8, 9, 9, 9, 0, 0, 0, 1]
         )
 
-    def addTwoNumbers(self, l1: [int], l2: [int], expected: [int]):
+    def addTwoNumbers(self, l1: list[int], l2: list[int], expected: list[int]):
         helper = ListHelper()
 
         l1 = helper.makeList(l1)
@@ -26,7 +26,3 @@ class TestCase(unittest.TestCase):
         actual = self.solution.addTwoNumbers(l1, l2)
 
         assert helper.compareList(expected, actual)
-
-
-if __name__ == "__main__":
-    unittest.main()

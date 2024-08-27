@@ -1,3 +1,5 @@
+# 1115. Print FooBar Alternately
+#
 # Suppose you are given the following code:
 #
 # class FooBar {
@@ -20,6 +22,11 @@
 #     thread B will call bar().
 #
 # Modify the given program to output "foobar" n times.
+#
+# Constraints:
+#
+# - 1 <= n <= 1000
+
 
 from threading import Event
 from typing import Callable

@@ -11,7 +11,3 @@ class TestCase(unittest.TestCase):
     def test_climbStairs(self):
         self.assertEqual(self.solution.climbStairs(2), 2)
         self.assertEqual(self.solution.climbStairs(3), 3)
-
-
-if __name__ == "__main__":
-    unittest.main()

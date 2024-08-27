@@ -51,7 +51,3 @@ class TestCase(unittest.TestCase):
                 Token("a", False),
             ],
         )
-
-
-if __name__ == "__main__":
-    unittest.main()

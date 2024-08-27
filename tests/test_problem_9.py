@@ -12,7 +12,3 @@ class TestCase(unittest.TestCase):
         self.assertTrue(self.solution.isPalindrome(121))
         self.assertFalse(self.solution.isPalindrome(-121))
         self.assertFalse(self.solution.isPalindrome(10))
-
-
-if __name__ == "__main__":
-    unittest.main()
