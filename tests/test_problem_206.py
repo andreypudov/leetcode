@@ -17,8 +17,8 @@ class TestCase(unittest.TestCase):
     def reverseList(self, head: list[int], expected: list[int]):
         helper = ListHelper()
 
-        head = helper.makeList(head)
-        expected = helper.makeList(expected)
+        head = helper.make_list(head)
+        expected = helper.make_list(expected)
         actual = self.solution.reverseList(head)
 
-        assert helper.compareList(expected, actual)
+        assert helper.compare_lists(expected, actual)
