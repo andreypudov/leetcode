@@ -8,7 +8,7 @@ from problems.problem_595 import big_countries
 class TestCase(unittest.TestCase):
     def __init__(self, *args, **kwargs):
         super(TestCase, self).__init__(*args, **kwargs)
-        self.input = {
+        self.world = {
             "name": ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola"],
             "continent": ["Asia", "Europe", "Africa", "Europe", "Africa"],
             "area": [652230, 28748, 2381741, 468, 1246700],
@@ -22,6 +22,6 @@ class TestCase(unittest.TestCase):
         }
 
     def test_big_countries(self):
-        actual = big_countries(pd.DataFrame(self.input))
+        actual = big_countries(pd.DataFrame(self.world))
         expected = pd.DataFrame(self.expected)
         self.assertEqual(actual.to_dict("records"), expected.to_dict("records"))
