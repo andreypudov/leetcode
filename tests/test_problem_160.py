@@ -19,10 +19,10 @@ class TestCase(unittest.TestCase):
     ):
         helper = ListHelper()
 
-        head_a = helper.makeList(head_a)
-        head_b = helper.makeList(head_b)
+        head_a = helper.make_list(head_a)
+        head_b = helper.make_list(head_b)
 
-        expected = helper.makeList(expected)
+        expected = helper.make_list(expected)
         actual = self.solution.getIntersectionNode(head_a, head_b)
 
-        assert helper.compareList(expected, actual)
+        assert helper.compare_lists(expected, actual)
