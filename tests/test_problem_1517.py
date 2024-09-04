@@ -42,5 +42,4 @@ class TestCase(unittest.TestCase):
     def test_valid_emails(self):
         actual = valid_emails(pd.DataFrame(self.users))
         expected = pd.DataFrame(self.expected)
-        print(actual)
         self.assertEqual(actual.to_dict("records"), expected.to_dict("records"))
