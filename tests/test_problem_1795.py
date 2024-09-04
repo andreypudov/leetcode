@@ -23,5 +23,4 @@ class TestCase(unittest.TestCase):
     def test_rearrange_products_table(self):
         actual = rearrange_products_table(pd.DataFrame(self.products))
         expected = pd.DataFrame(self.expected)
-        print(actual)
         self.assertEqual(actual.to_dict("records"), expected.to_dict("records"))
