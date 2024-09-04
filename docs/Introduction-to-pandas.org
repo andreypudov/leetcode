@@ -1,0 +1,21 @@
+#+title: Introduction to Pandas
+#+author: Andrey Pudov, Marya Letunenko
+#+date: <2024-09-04 Mon>
+
+| Title                              | Difficulty |
+|------------------------------------+------------|
+| [[../problems/problem_2877.py][2877. Create a DataFrame from List]] | Easy       |
+| [[../problems/problem_2878.py][2878. Get the Size of a DataFrame]]  | Easy       |
+| [[../problems/problem_2879.py][2879. Display the First Three Rows]] | Easy       |
+| [[../problems/problem_2880.py][2880. Select Data]]                  | Easy       |
+| [[../problems/problem_2881.py][2881. Create a New Column]]          | Easy       |
+| [[../problems/problem_2882.py][2882. Drop Duplicate Rows]]          | Easy       |
+| [[../problems/problem_2883.py][2883. Drop Missing Data]]            | Easy       |
+| [[../problems/problem_2884.py][2884. Modify Columns]]               | Easy       |
+| [[../problems/problem_2885.py][2885. Rename Columns]]               | Easy       |
+| [[../problems/problem_2886.py][2886. Change Data Type]]             | Easy       |
+| [[../problems/problem_2887.py][2887. Fill Missing Data]]            | Easy       |
+| [[../problems/problem_2888.py][2888. Reshape Data: Concatenate]]    | Easy       |
+| [[../problems/problem_2889.py][2889. Reshape Data: Pivot]]          | Easy       |
+| [[../problems/problem_2890.py][2890. Reshape Data: Melt]]           | Easy       |
+| [[../problems/problem_2891.py][2891. Method Chaining]]              | Easy       |
