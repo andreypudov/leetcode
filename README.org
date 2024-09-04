@@ -28,8 +28,8 @@
 
 ** Study Plan
 
-[[./docs/30-days-of-pandas.org][30 Days of Pandas]]
-[[./docs/Introduction-to-pandas.org][Introduction to Pandas]]
+- [[./docs/30-days-of-pandas.org][30 Days of Pandas]]
+- [[./docs/Introduction-to-pandas.org][Introduction to Pandas]]
 
 ** Development
 
