@@ -4,7 +4,7 @@
 
 #+begin_html
 <a href="https://leetcode.com/u/syscreat/">
-  <img src="https://leetcard.jacoblin.cool/syscreat?theme=unicorn&font=Prata&ext=activity" />
+  <img src="https://leetcard.jacoblin.cool/syscreat?theme=dark&font=Noto%20Sans&ext=activity" />
 </a>
 #+end_html
 
