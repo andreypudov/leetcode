@@ -3,7 +3,7 @@
 #+date: <2023-05-08 Mon>
 
 ![LeetCode Stats](https://leetcard.jacoblin.cool/syscreat?theme=unicorn&font=Prata&ext=activity)
-![[https://leetcard.jacoblin.cool/syscreat?theme=unicorn&font=Prata&ext=activity]]
+[[https://leetcard.jacoblin.cool/syscreat?theme=unicorn&font=Prata&ext=activity][LeetCode Stats]]
 
 | Title                                             | Difficulty |
 |---------------------------------------------------+------------|
