@@ -1,6 +1,6 @@
 from typing import Optional, Protocol
 
-from core.list import ListNode
+from problems.core.list import ListNode
 
 
 class SolutionProto(Protocol):

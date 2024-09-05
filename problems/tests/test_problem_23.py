@@ -3,7 +3,7 @@ import unittest
 from problems.helpers.list import ListHelper
 from problems.problem_23 import Solution as Solution1
 from problems.problem_23_2 import Solution as Solution2
-from protocols.problem_23 import SolutionProto
+from problems.protocols.problem_23 import SolutionProto
 
 
 class TestCase(unittest.TestCase):
