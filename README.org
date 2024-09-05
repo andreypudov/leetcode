@@ -2,8 +2,11 @@
 #+author: Andrey Pudov, Marya Letunenko
 #+date: <2023-05-08 Mon>
 
-![LeetCode Stats](https://leetcard.jacoblin.cool/syscreat?theme=unicorn&font=Prata&ext=activity)
-[[https://leetcard.jacoblin.cool/syscreat?theme=unicorn&font=Prata&ext=activity][LeetCode Stats]]
+#+begin_html
+<a href="https://leetcode.com/u/syscreat/">
+  <img src="https://leetcard.jacoblin.cool/syscreat?theme=unicorn&font=Prata&ext=activity" />
+</a>
+#+end_html
 
 | Title                                             | Difficulty |
 |---------------------------------------------------+------------|
