@@ -2,7 +2,7 @@
 #+author: Andrey Pudov, Marya Letunenko
 #+date: <2023-05-08 Mon>
 
-[[https://leetcard.jacoblin.cool/syscreat?theme=unicorn&font=Prata&ext=activity][]]
+[[https://leetcard.jacoblin.cool/syscreat?theme=unicorn&font=Prata&ext=activity]]
 
 | Title                                             | Difficulty |
 |---------------------------------------------------+------------|
