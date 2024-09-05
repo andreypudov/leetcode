@@ -32,5 +32,4 @@ class TestCase(unittest.TestCase):
     def test_game_analysis(self):
         actual = game_analysis(pd.DataFrame(self.activity))
         expected = pd.DataFrame(self.expected)
-        print(actual)
         self.assertEqual(actual.to_dict("records"), expected.to_dict("records"))
