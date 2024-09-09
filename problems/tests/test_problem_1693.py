@@ -1,6 +1,7 @@
 import unittest
 
 import pandas as pd
+from pandas.testing import assert_frame_equal
 
 from problems.problem_1693 import daily_leads_and_partners
 
@@ -51,4 +52,4 @@ class TestCase(unittest.TestCase):
     def test_daily_leads_and_partners(self):
         actual = daily_leads_and_partners(pd.DataFrame(self.daily_sales))
         expected = pd.DataFrame(self.expected)
-        self.assertEqual(actual.to_dict("records"), expected.to_dict("records"))
+        assert_frame_equal(actual, expected)

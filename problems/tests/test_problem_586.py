@@ -1,6 +1,7 @@
 import unittest
 
 import pandas as pd
+from pandas.testing import assert_frame_equal
 
 from problems.problem_586 import largest_orders
 
@@ -19,4 +20,4 @@ class TestCase(unittest.TestCase):
     def test_largest_orders(self):
         actual = largest_orders(pd.DataFrame(self.orders))
         expected = pd.DataFrame(self.expected)
-        self.assertEqual(actual.to_dict("records"), expected.to_dict("records"))
+        assert_frame_equal(actual, expected)

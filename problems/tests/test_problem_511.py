@@ -1,6 +1,7 @@
 import unittest
 
 import pandas as pd
+from pandas.testing import assert_frame_equal
 
 from problems.problem_511 import game_analysis
 
@@ -32,4 +33,4 @@ class TestCase(unittest.TestCase):
     def test_game_analysis(self):
         actual = game_analysis(pd.DataFrame(self.activity))
         expected = pd.DataFrame(self.expected)
-        self.assertEqual(actual.to_dict("records"), expected.to_dict("records"))
+        assert_frame_equal(actual, expected)
