@@ -1,6 +1,7 @@
 import unittest
 
 import pandas as pd
+from pandas.testing import assert_frame_equal
 
 from problems.problem_1741 import total_time
 
@@ -29,4 +30,6 @@ class TestCase(unittest.TestCase):
     def test_total_time(self):
         actual = total_time(pd.DataFrame(self.employees))
         expected = pd.DataFrame(self.expected)
-        self.assertEqual(actual.to_dict("records"), expected.to_dict("records"))
+        assert_frame_equal(
+            actual.reset_index(drop=True), expected.reset_index(drop=True)
+        )

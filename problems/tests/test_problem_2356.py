@@ -1,6 +1,7 @@
 import unittest
 
 import pandas as pd
+from pandas.testing import assert_frame_equal
 
 from problems.problem_2356 import count_unique_subjects
 
@@ -21,4 +22,4 @@ class TestCase(unittest.TestCase):
     def test_count_unique_subjects(self):
         actual = count_unique_subjects(pd.DataFrame(self.teacher))
         expected = pd.DataFrame(self.expected)
-        self.assertEqual(actual.to_dict("records"), expected.to_dict("records"))
+        assert_frame_equal(actual, expected)

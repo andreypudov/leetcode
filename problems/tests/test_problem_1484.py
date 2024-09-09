@@ -1,6 +1,7 @@
 import unittest
 
 import pandas as pd
+from pandas.testing import assert_frame_equal
 
 from problems.problem_1484 import categorize_products
 
@@ -45,5 +46,4 @@ class TestCase(unittest.TestCase):
     def test_categorize_products(self):
         actual = categorize_products(pd.DataFrame(self.activities))
         expected = pd.DataFrame(self.expected)
-        print(pd.DataFrame(self.activities))
-        self.assertEqual(actual.to_dict("records"), expected.to_dict("records"))
+        assert_frame_equal(actual, expected)

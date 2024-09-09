@@ -1,6 +1,7 @@
 import unittest
 
 import pandas as pd
+from pandas.testing import assert_frame_equal
 
 from problems.problem_595 import big_countries
 
@@ -24,4 +25,6 @@ class TestCase(unittest.TestCase):
     def test_big_countries(self):
         actual = big_countries(pd.DataFrame(self.world))
         expected = pd.DataFrame(self.expected)
-        self.assertEqual(actual.to_dict("records"), expected.to_dict("records"))
+        assert_frame_equal(
+            actual.reset_index(drop=True), expected.reset_index(drop=True)
+        )

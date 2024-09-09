@@ -1,6 +1,7 @@
 import unittest
 
 import pandas as pd
+from pandas.testing import assert_frame_equal
 
 from problems.problem_596 import find_classes
 
@@ -29,4 +30,4 @@ class TestCase(unittest.TestCase):
     def test_find_classes(self):
         actual = find_classes(pd.DataFrame(self.courses))
         expected = pd.DataFrame(self.expected)
-        self.assertEqual(actual.to_dict("records"), expected.to_dict("records"))
+        assert_frame_equal(actual, expected)

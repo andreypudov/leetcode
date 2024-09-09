@@ -1,6 +1,7 @@
 import unittest
 
 import pandas as pd
+from pandas.testing import assert_frame_equal
 
 from problems.problem_1517 import valid_emails
 
@@ -42,4 +43,6 @@ class TestCase(unittest.TestCase):
     def test_valid_emails(self):
         actual = valid_emails(pd.DataFrame(self.users))
         expected = pd.DataFrame(self.expected)
-        self.assertEqual(actual.to_dict("records"), expected.to_dict("records"))
+        assert_frame_equal(
+            actual.reset_index(drop=True), expected.reset_index(drop=True)
+        )
