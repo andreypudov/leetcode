@@ -34,7 +34,6 @@ class TestCase(unittest.TestCase):
             pd.DataFrame(self.employee), pd.DataFrame(self.department)
         )
         expected = pd.DataFrame(self.expected)
-        print(actual)
         assert_frame_equal(
             actual.reset_index(drop=True), expected.reset_index(drop=True)
         )

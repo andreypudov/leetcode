@@ -21,7 +21,6 @@ class TestCase(unittest.TestCase):
     def test_order_scores(self):
         actual = order_scores(pd.DataFrame(self.scores))
         expected = pd.DataFrame(self.expected)
-        print(actual)
         assert_frame_equal(
             actual.reset_index(drop=True), expected.reset_index(drop=True)
         )
