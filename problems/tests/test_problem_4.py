@@ -10,4 +10,6 @@ class TestCase(unittest.TestCase):
 
     def test_findMedianSortedArrays(self):
         self.assertEqual(self.solution.findMedianSortedArrays([1, 3], [2]), 2.0)
-        self.assertEqual(self.solution.findMedianSortedArrays([1, 2], [3, 4]), 2.5)
+        self.assertEqual(
+            self.solution.findMedianSortedArrays([1, 2], [3, 4]), 2.5
+        )

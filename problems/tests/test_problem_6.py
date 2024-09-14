@@ -9,6 +9,10 @@ class TestCase(unittest.TestCase):
         self.solution = Solution()
 
     def test_twoSum(self):
-        self.assertEqual(self.solution.convert("PAYPALISHIRING", 3), "PAHNAPLSIIGYIR")
-        self.assertEqual(self.solution.convert("PAYPALISHIRING", 4), "PINALSIGYAHRPI")
+        self.assertEqual(
+            self.solution.convert("PAYPALISHIRING", 3), "PAHNAPLSIIGYIR"
+        )
+        self.assertEqual(
+            self.solution.convert("PAYPALISHIRING", 4), "PINALSIGYAHRPI"
+        )
         self.assertEqual(self.solution.convert("A", 1), "A")

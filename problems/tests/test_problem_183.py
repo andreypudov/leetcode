@@ -22,7 +22,9 @@ class TestCase(unittest.TestCase):
         }
 
     def test_find_customers(self):
-        actual = find_customers(pd.DataFrame(self.customers), pd.DataFrame(self.orders))
+        actual = find_customers(
+            pd.DataFrame(self.customers), pd.DataFrame(self.orders)
+        )
         expected = pd.DataFrame(self.expected)
         assert_frame_equal(
             actual.reset_index(drop=True), expected.reset_index(drop=True)

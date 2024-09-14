@@ -11,7 +11,11 @@ class TestCase(unittest.TestCase):
         super(TestCase, self).__init__(*args, **kwargs)
         self.person = {
             "id": [1, 2, 3],
-            "email": ["john@example.com", "bob@example.com", "john@example.com"],
+            "email": [
+                "john@example.com",
+                "bob@example.com",
+                "john@example.com",
+            ],
         }
         self.expected = {
             "id": [1, 2],

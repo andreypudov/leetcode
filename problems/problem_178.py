@@ -27,7 +27,9 @@ import pandas as pd
 
 def order_scores(scores: pd.DataFrame) -> pd.DataFrame:
     return (
-        scores.assign(rank=scores["score"].rank(method="dense", ascending=False))
+        scores.assign(
+            rank=scores["score"].rank(method="dense", ascending=False)
+        )
         .sort_values(by="score", ascending=False)
         .drop("id", axis=1)
     )

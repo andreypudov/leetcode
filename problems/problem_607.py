@@ -56,8 +56,10 @@ def sales_person(
 ) -> pd.DataFrame:
     return sales_person[
         ~sales_person["sales_id"].isin(
-            orders[orders["com_id"].isin(company[company["name"] == "RED"]["com_id"])][
-                "sales_id"
-            ]
+            orders[
+                orders["com_id"].isin(
+                    company[company["name"] == "RED"]["com_id"]
+                )
+            ]["sales_id"]
         )
     ][["name"]]

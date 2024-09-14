@@ -31,7 +31,9 @@ class ListHelper:
 
         return result
 
-    def compare_lists(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> bool:
+    def compare_lists(
+        self, l1: Optional[ListNode], l2: Optional[ListNode]
+    ) -> bool:
         while l1 and l2:
             if l1.val != l2.val:
                 return False

@@ -13,7 +13,13 @@ class TestCase(unittest.TestCase):
             "sales_id": [1, 2, 3, 4, 5],
             "name": ["John", "Amy", "Mark", "Pam", "Alex"],
             "commission_rate": [6, 5, 12, 25, 10],
-            "hire_date": ["4/1/2006", "5/1/2010", "12/25/2008", "1/1/2005", "2/3/2007"],
+            "hire_date": [
+                "4/1/2006",
+                "5/1/2010",
+                "12/25/2008",
+                "1/1/2005",
+                "2/3/2007",
+            ],
         }
         self.company = {
             "com_id": [1, 2, 3, 4],

@@ -15,14 +15,19 @@ class TestCase(unittest.TestCase):
     def test_mergeKLists(self):
         for solution in [self.solution_1, self.solution_2]:
             self.__merge_k_lists(
-                solution, [[1, 4, 5], [1, 3, 4], [2, 6]], [1, 1, 2, 3, 4, 4, 5, 6]
+                solution,
+                [[1, 4, 5], [1, 3, 4], [2, 6]],
+                [1, 1, 2, 3, 4, 4, 5, 6],
             )
             self.__merge_k_lists(solution, [], [])
             self.__merge_k_lists(solution, [[]], [])
             self.__merge_k_lists(solution, [[], [1]], [1])
 
     def __merge_k_lists(
-        self, solution: SolutionProto, lists: list[list[int]], expected: list[int]
+        self,
+        solution: SolutionProto,
+        lists: list[list[int]],
+        expected: list[int],
     ):
         helper = ListHelper()
 

@@ -43,16 +43,19 @@ import pandas as pd
 def students_and_examinations(
     students: pd.DataFrame, subjects: pd.DataFrame, examinations: pd.DataFrame
 ) -> pd.DataFrame:
-    student_and_subjects = pd.merge(students, subjects, how="cross").sort_values(
-        by=["student_id", "subject_name"]
-    )
+    student_and_subjects = pd.merge(
+        students, subjects, how="cross"
+    ).sort_values(by=["student_id", "subject_name"])
     attempts = (
         examinations.groupby(["student_id", "subject_name"])
         .size()
         .reset_index(name="attended_exams")
     )
     students_and_examinations = pd.merge(
-        student_and_subjects, attempts, on=["student_id", "subject_name"], how="left"
+        student_and_subjects,
+        attempts,
+        on=["student_id", "subject_name"],
+        how="left",
     )
     students_and_examinations["attended_exams"] = students_and_examinations[
         "attended_exams"

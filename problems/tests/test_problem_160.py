@@ -10,7 +10,9 @@ class TestCase(unittest.TestCase):
         self.solution = Solution()
 
     def test_getIntersectionNode(self):
-        self.getIntersectionNode([4, 1, 8, 4, 5], [5, 6, 1, 8, 4, 5], [1, 8, 4, 5])
+        self.getIntersectionNode(
+            [4, 1, 8, 4, 5], [5, 6, 1, 8, 4, 5], [1, 8, 4, 5]
+        )
         self.getIntersectionNode([1, 9, 1, 2, 4], [3, 2, 4], [2, 4])
         self.getIntersectionNode([2, 6, 4], [1, 5], [])
 

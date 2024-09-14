@@ -10,7 +10,9 @@ from problems.core.list import ListNode
 
 
 class Solution:
-    def mergeKLists(self, lists: list[Optional[ListNode]]) -> Optional[ListNode]:
+    def mergeKLists(
+        self, lists: list[Optional[ListNode]]
+    ) -> Optional[ListNode]:
         elements = self.__make_sorted_list(lists)
 
         return self.__make_linked_list(elements)

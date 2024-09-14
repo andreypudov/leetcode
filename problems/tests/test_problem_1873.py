@@ -14,7 +14,10 @@ class TestCase(unittest.TestCase):
             "name": ["Meir", "Michael", "Addilyn", "Juan", "Kannon"],
             "salary": [3000, 3800, 7400, 6100, 7700],
         }
-        self.expected = {"employee_id": [2, 3, 7, 8, 9], "bonus": [0, 0, 7400, 0, 7700]}
+        self.expected = {
+            "employee_id": [2, 3, 7, 8, 9],
+            "bonus": [0, 0, 7400, 0, 7700],
+        }
 
     def test_calculate_special_bonus(self):
         actual = calculate_special_bonus(pd.DataFrame(self.employees))

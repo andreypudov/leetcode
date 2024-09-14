@@ -26,7 +26,9 @@ class TestCase(unittest.TestCase):
         self.assertTrue(self.solution.isMatch("bbbba", ".*a*a"))
         self.assertFalse(self.solution.isMatch("bbab", "b*a*"))
         self.assertFalse(
-            self.solution.isMatch("aaaaaaaaaaaaaaaaaaab", "a*a*a*a*a*a*a*a*a*a*")
+            self.solution.isMatch(
+                "aaaaaaaaaaaaaaaaaaab", "a*a*a*a*a*a*a*a*a*a*"
+            )
         )
         self.assertTrue(self.solution.isMatch("baba", "b*.*"))
 

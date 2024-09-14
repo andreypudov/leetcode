@@ -16,7 +16,9 @@ class TestCase(unittest.TestCase):
             [9, 9, 9, 9, 9, 9, 9], [9, 9, 9, 9], [8, 9, 9, 9, 0, 0, 0, 1]
         )
 
-    def __add_two_numbers(self, l1: list[int], l2: list[int], expected: list[int]):
+    def __add_two_numbers(
+        self, l1: list[int], l2: list[int], expected: list[int]
+    ):
         helper = ListHelper()
 
         l1 = helper.make_list(l1)
