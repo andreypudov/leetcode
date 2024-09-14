@@ -22,5 +22,6 @@ import pandas as pd
 
 def largest_orders(orders: pd.DataFrame) -> pd.DataFrame:
     # orders = orders.groupby("customer_number").count().reset_index()
-    # return orders[orders["order_number"] == orders["order_number"].max()][["customer_number"]]
+    # return (orders[orders["order_number"] == orders["order_number"]
+    # .max()][["customer_number"]])
     return orders["customer_number"].mode().to_frame()

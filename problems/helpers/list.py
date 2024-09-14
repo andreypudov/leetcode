@@ -1,4 +1,4 @@
-from typing import Optional, overload
+from typing import Optional
 
 from problems.core.list import ListNode
 
