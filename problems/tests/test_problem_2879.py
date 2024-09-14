@@ -46,7 +46,7 @@ class TestCase(unittest.TestCase):
 
     def test_selectFirstRows(self):
         actual = selectFirstRows(pd.DataFrame(self.employees))
-        expected = selectFirstRows(pd.DataFrame(self.expected))
+        expected = pd.DataFrame(self.expected)
         assert_frame_equal(
             actual.reset_index(drop=True), expected.reset_index(drop=True)
         )
