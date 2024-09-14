@@ -3,6 +3,10 @@ repos:
   rev: 24.8.0
   hooks:
   - id: black
+- repo: https://github.com/john-hen/Flake8-pyproject
+  rev: 1.2.3
+  hooks:
+  - id: Flake8-pyproject
 - repo: https://github.com/pycqa/flake8
   rev: 7.1.1
   hooks:
