@@ -2,7 +2,7 @@
 #+author: Andrey Pudov, Marya Letunenko
 #+date: <2024-09-04 Mon>
 
-* Data Filtering
+** Data Filtering
 
 | Title                                                          | Difficulty |
 |----------------------------------------------------------------+------------|
@@ -11,7 +11,7 @@
 | [[../problems/problem_183.py][183. Customers Who Never Order]]                                 | Easy       |
 | [[../problems/problem_1148.py][1148. Article Views I]]                                          | Easy       |
 
-* String Methods
+** String Methods
 
 | Title                                                          | Difficulty |
 |----------------------------------------------------------------+------------|
@@ -21,13 +21,13 @@
 | [[../problems/problem_1517.py][1517. Find Users With Valid E-Mails]]                            | Easy       |
 | [[../problems/problem_1527.py][1527. Patients With a Condition]]                                | Easy       |
 
-* Strengthen Your Learning by Solving this Question
+** Strengthen Your Learning by Solving this Question
 
 | Title                                                          | Difficulty |
 |----------------------------------------------------------------+------------|
 | [[../problems/problem_0000.py][Count Occurrences in Text]]                                      | Medium     |
 
-* Data Manipulation
+** Data Manipulation
 
 | Title                                                          | Difficulty |
 |----------------------------------------------------------------+------------|
@@ -38,7 +38,7 @@
 | [[../problems/problem_196.py][196. Delete Duplicate Emails]]                                   | Easy       |
 | [[../problems/problem_1795.py][1795. Rearrange Products Table]]                                 | Easy       |
 
-* Statistics
+** Statistics
 
 | Title                                                          | Difficulty |
 |----------------------------------------------------------------+------------|
@@ -46,7 +46,7 @@
 | [[../problems/problem_0000.py][Immediate Food Delivery I]]                                      | Easy       |
 | [[../problems/problem_1907.py][1907. Count Salary Categories]]                                  | Medium     |
 
-* Strengthen Your Learning by Solving this Question
+** Strengthen Your Learning by Solving this Question
 
 | Title                                                          | Difficulty |
 |----------------------------------------------------------------+------------|
@@ -59,7 +59,7 @@
 | [[../problems/problem_1484.py][1484. Group Sold Products By The Date]]                          | Easy       |
 | [[../problems/problem_1693.py][1693. Daily Leads and Partners]]                                 | Easy       |
 
-* Data Aggregation
+** Data Aggregation
 
 | Title                                                          | Difficulty |
 |----------------------------------------------------------------+------------|
@@ -69,7 +69,7 @@
 | [[../problems/problem_570.py][570. Managers with at Least 5 Direct Reports]]                   | Medium     |
 | [[../problems/problem_607.py][607. Sales Person]]                                              | Easy       |
 
-* Strengthen Your Learning by Solving this Question
+** Strengthen Your Learning by Solving this Question
 
 | Title                                                          | Difficulty |
 |----------------------------------------------------------------+------------|

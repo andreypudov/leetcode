@@ -2,7 +2,7 @@
 #+author: Andrey Pudov, Marya Letunenko
 #+date: <2024-09-15 Sun>
 
-* Array / String
+** Array / String
 
 | Title                                      | Difficulty |
 |--------------------------------------------+------------|
