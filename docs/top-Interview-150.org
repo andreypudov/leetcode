@@ -2,157 +2,155 @@
 #+author: Andrey Pudov, Marya Letunenko
 #+date: <2024-09-15 Sun>
 
-** Array / String
-
-| Title                                      | Difficulty |
-|--------------------------------------------+------------|
-| [[../problems/problem_88.py][88. Merge Sorted Array]]                     | Easy       |
-| [[../problems/problem_27.py][27. Remove Element]]                         | Easy       |
-| [[../problems/problem_26.py][26. Remove Duplicates from Sorted Array]]    | Easy       |
-| [[../problems/problem_80.py][80. Remove Duplicates from Sorted Array II]] | Medium     |
-| [[../problems/problem_169.py][169. Majority Element]]                      | Easy       |
-| [[../problems/problem_189.py][189. Rotate Array]]                          | Medium     |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
-| [[../problems/problem_00.py][88. Name]]                                   | Easy       |
+| Title                                                  | Difficulty |
+|--------------------------------------------------------+------------|
+| [[../problems/problem_88.py][88. Merge Sorted Array]]                                 | Easy       |
+| [[../problems/problem_27.py][27. Remove Element]]                                     | Easy       |
+| [[../problems/problem_26.py][26. Remove Duplicates from Sorted Array]]                | Easy       |
+| [[../problems/problem_80.py][80. Remove Duplicates from Sorted Array II]]             | Medium     |
+| [[../problems/problem_169.py][169. Majority Element]]                                  | Easy       |
+| [[../problems/problem_189.py][189. Rotate Array]]                                      | Medium     |
+| [[../problems/problem_121.py][121. Best Time to Buy and Sell Stock]]                   | Easy       |
+| [[../problems/problem_122.py][122. Best Time to Buy and Sell Stock II]]                | Medium     |
+| [[../problems/problem_55.py][55. Jump Game]]                                          | Medium     |
+| [[../problems/problem_45.py][45. Jump Game II]]                                       | Medium     |
+| [[../problems/problem_274.py][274. H-Index]]                                           | Medium     |
+| [[../problems/problem_380.py][380. Insert Delete GetRandom O(1)]]                      | Medium     |
+| [[../problems/problem_238.py][238. Product of Array Except Self]]                      | Medium     |
+| [[../problems/problem_134.py][134. Gas Station]]                                       | Medium     |
+| [[../problems/problem_135.py][135. Candy]]                                             | Hard       |
+| [[../problems/problem_42.py][42. Trapping Rain Water]]                                | Hard       |
+| [[../problems/problem_13.py][13. Roman to Integer]]                                   | Easy       |
+| [[../problems/problem_12.py][12. Integer to Roman]]                                   | Medium     |
+| [[../problems/problem_58.py][58. Length of Last Word]]                                | Easy       |
+| [[../problems/problem_14.py][14. Longest Common Prefix]]                              | Easy       |
+| [[../problems/problem_151.py][151. Reverse Words in a String]]                         | Medium     |
+| [[../problems/problem_6.py][6. Zigzag Conversion]]                                   | Medium     |
+| [[../problems/problem_28.py][28. Find the Index of the First Occurrence in a String]] | Easy       |
+| [[../problems/problem_68.py][68. Text Justification]]                                 | Hard       |
+| [[../problems/problem_125.py][125. Valid Palindrome]]                                  | Easy       |
+| [[../problems/problem_392.py][392. Is Subsequence]]                                    | Easy       |
+| [[../problems/problem_167.py][167. Two Sum II - Input Array Is Sorted]]                | Medium     |
+| [[../problems/problem_11.py][11. Container With Most Water]]                          | Medium     |
+| [[../problems/problem_15.py][15. 3Sum]]                                               | Medium     |
+| [[../problems/problem_209.py][209. Minimum Size Subarray Sum]]                         | Medium     |
+| [[../problems/problem_3.py][3. Longest Substring Without Repeating Characters]]      | Medium     |
+| [[../problems/problem_30.py][30. Substring with Concatenation of All Words]]          | Hard       |
+| [[../problems/problem_76.py][76. Minimum Window Substring]]                           | Hard       |
+| [[../problems/problem_36.py][36. Valid Sudoku]]                                       | Medium     |
+| [[../problems/problem_54.py][54. Spiral Matrix]]                                      | Medium     |
+| [[../problems/problem_48.py][48. Rotate Image]]                                       | Medium     |
+| [[../problems/problem_73.py][73. Set Matrix Zeroes]]                                  | Medium     |
+| [[../problems/problem_289.py][289. Game of Life]]                                      | Medium     |
+| [[../problems/problem_383.py][383. Ransom Note]]                                       | Easy       |
+| [[../problems/problem_205.py][205. Isomorphic Strings]]                                | Easy       |
+| [[../problems/problem_290.py][290. Word Pattern]]                                      | Easy       |
+| [[../problems/problem_242.py][242. Valid Anagram]]                                     | Easy       |
+| [[../problems/problem_49.py][49. Group Anagrams]]                                     | Medium     |
+| [[../problems/problem_1.py][1. Two Sum]]                                             | Easy       |
+| [[../problems/problem_202.py][202. Happy Number]]                                      | Easy       |
+| [[../problems/problem_219.py][219. Contains Duplicate II]]                             | Easy       |
+| [[../problems/problem_128.py][128. Longest Consecutive Sequence]]                      | Medium     |
+| [[../problems/problem_228.py][228. Summary Ranges]]                                    | Easy       |
+| [[../problems/problem_56.py][56. Merge Intervals]]                                    | Medium     |
+| [[../problems/problem_57.py][57. Insert Interval]]                                    | Medium     |
+| [[../problems/problem_452.py][452. Minimum Number of Arrows to Burst Balloons]]        | Medium     |
+| [[../problems/problem_20.py][20. Valid Parentheses]]                                  | Easy       |
+| [[../problems/problem_71.py][71. Simplify Path]]                                      | Medium     |
+| [[../problems/problem_155.py][155. Min Stack]]                                         | Medium     |
+| [[../problems/problem_150.py][150. Evaluate Reverse Polish Notation]]                  | Medium     |
+| [[../problems/problem_224.py][224. Basic Calculator]]                                  | Hard       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
+| [[../problems/problem_00.py][88. Name]]                                               | Easy       |
