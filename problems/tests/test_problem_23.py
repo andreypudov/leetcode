@@ -3,7 +3,7 @@ import unittest
 from problems.helpers.list import ListHelper
 from problems.problem_23 import Solution as Solution1
 from problems.problem_23_2 import Solution as Solution2
-from problems.protocols.problem_23 import SolutionProto
+from problems.protocols.problem_23 import Solution
 
 
 class TestCase(unittest.TestCase):
@@ -25,7 +25,7 @@ class TestCase(unittest.TestCase):
 
     def __merge_k_lists(
         self,
-        solution: SolutionProto,
+        solution: Solution,
         lists: list[list[int]],
         expected: list[int],
     ):
