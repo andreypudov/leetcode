@@ -2,6 +2,12 @@
 #+author: Andrey Pudov, Marya Letunenko
 #+date: <2023-05-08 Mon>
 
+#+begin_html
+<a href="https://leetcode.com/u/syscreat/">
+  <img src="https://leetcard.jacoblin.cool/syscreat?theme=dark&font=Noto%20Sans" />
+</a>
+#+end_html
+
 | Title                                             | Difficulty |
 |---------------------------------------------------+------------|
 | [[./problems/problem_1.py][1. Two Sum]]                                        | Easy       |
@@ -17,8 +23,9 @@
 | [[./problems/problem_12.py][12. Integer to Roman]]                              | Medium     |
 | [[./problems/problem_13.py][13. Roman to Integer]]                              | Easy       |
 | [[./problems/problem_14.py][14. Longest Common Prefix]]                         | Easy       |
+| [[./problems/problem_15_2.py][15. 3Sum]]                                          | Medium     |
 | [[./problems/problem_16.py][16. 3Sum Closest]]                                  | Medium     |
-| [[./problems/problem_23.py][23. Merge k Sorted Lists]]                          | Hard       |
+| [[./problems/problem_23_2.py][23. Merge k Sorted Lists]]                          | Hard       |
 | [[./problems/problem_29.py][29. Divide Two Integers]]                           | Medium     |
 | [[./problems/problem_70.py][70. Climbing Stairs]]                               | Easy       |
 | [[./problems/problem_160.py][160. Intersection of Two Linked Lists]]             | Easy       |
@@ -27,63 +34,11 @@
 | [[./problems/problem_1114.py][1114. Print in Order]]                              | Easy       |
 | [[./problems/problem_1115.py][1115. Print FooBar Alternately]]                    | Medium     |
 
-** Introduction to Pandas
+** Study Plan
 
-| Title                              | Difficulty |
-|------------------------------------+------------|
-| [[./problems/problem_2877.py][2877. Create a DataFrame from List]] | Easy       |
-| [[./problems/problem_2878.py][2878. Get the Size of a DataFrame]]  | Easy       |
-| [[./problems/problem_2879.py][2879. Display the First Three Rows]] | Easy       |
-| [[./problems/problem_2880.py][2880. Select Data]]                  | Easy       |
-| [[./problems/problem_2881.py][2881. Create a New Column]]          | Easy       |
-| [[./problems/problem_2882.py][2882. Drop Duplicate Rows]]          | Easy       |
-| [[./problems/problem_2883.py][2883. Drop Missing Data]]            | Easy       |
-| [[./problems/problem_2884.py][2884. Modify Columns]]               | Easy       |
-| [[./problems/problem_2885.py][2885. Rename Columns]]               | Easy       |
-| [[./problems/problem_2886.py][2886. Change Data Type]]             | Easy       |
-| [[./problems/problem_2887.py][2887. Fill Missing Data]]            | Easy       |
-| [[./problems/problem_2888.py][2888. Reshape Data: Concatenate]]    | Easy       |
-| [[./problems/problem_2889.py][2889. Reshape Data: Pivot]]          | Easy       |
-| [[./problems/problem_2890.py][2890. Reshape Data: Melt]]           | Easy       |
-| [[./problems/problem_2891.py][2891. Method Chaining]]              | Easy       |
-
-** 30 Days of Pandas
-
-| Title                                                          | Difficulty |
-|----------------------------------------------------------------+------------|
-| [[./problems/problem_595.py][595. Big Countries]]                                             | Easy       |
-| [[./problems/problem_1757.py][1757. Recyclable and Low Fat Products]]                          | Easy       |
-| [[./problems/problem_183.py][183. Customers Who Never Order]]                                 | Easy       |
-| [[./problems/problem_1148.py][1148. Article Views I]]                                          | Easy       |
-| [[./problems/problem_1683.py][1683. Invalid Tweets]]                                           | Easy       |
-| [[./problems/problem_1873.py][1873. Calculate Special Bonus]]                                  | Easy       |
-| [[./problems/problem_1667.py][1667. Fix Names in a Table]]                                     | Easy       |
-| [[./problems/problem_1517.py][1517. Find Users With Valid E-Mails]]                            | Easy       |
-| [[./problems/problem_1527.py][1527. Patients With a Condition]]                                | Easy       |
-| [[./problems/problem_0000.py][Count Occurrences in Text]]                                      | Medium     |
-| [[./problems/problem_177.py][177. Nth Highest Salary]]                                        | Medium     |
-| [[./problems/problem_176.py][176. Second Highest Salary]]                                     | Medium     |
-| [[./problems/problem_184.py][184. Department Highest Salary]]                                 | Medium     |
-| [[./problems/problem_178.py][178. Rank Scores]]                                               | Medium     |
-| [[./problems/problem_196.py][196. Delete Duplicate Emails]]                                   | Easy       |
-| [[./problems/problem_1795.py][1795. Rearrange Products Table]]                                 | Easy       |
-| [[./problems/problem_0000.py][The Number of Rich Customers]]                                   | Easy       |
-| [[./problems/problem_0000.py][Immediate Food Delivery I]]                                      | Easy       |
-| [[./problems/problem_1907.py][1907. Count Salary Categories]]                                  | Medium     |
-| [[./problems/problem_0000.py][Ads Performance]]                                                | Easy       |
-| [[./problems/problem_1741.py][1741. Find Total Time Spent by Each Employee]]                   | Easy       |
-| [[./problems/problem_511.py][511. Game Play Analysis I]]                                      | Easy       |
-| [[./problems/problem_2356.py][2356. Number of Unique Subjects Taught by Each Teacher]]         | Easy       |
-| [[./problems/problem_596.py][596. Classes More Than 5 Students]]                              | Easy       |
-| [[./problems/problem_586.py][586. Customer Placing the Largest Number of Orders]]             | Easy       |
-| [[./problems/problem_1484.py][1484. Group Sold Products By The Date]]                          | Easy       |
-| [[./problems/problem_1693.py][1693. Daily Leads and Partners]]                                 | Easy       |
-| [[./problems/problem_1050.py][1050. Actors and Directors Who Cooperated At Least Three Times]] | Easy       |
-| [[./problems/problem_1378.py][1378. Replace Employee ID With The Unique Identifier]]           | Easy       |
-| [[./problems/problem_1280.py][1280. Students and Examinations]]                                | Easy       |
-| [[./problems/problem_570.py][570. Managers with at Least 5 Direct Reports]]                   | Medium     |
-| [[./problems/problem_607.py][607. Sales Person]]                                              | Easy       |
-| [[./problems/problem_0000.py][Accepted Candidates From the Interviews]]                        | Medium     |
+- [[./docs/top-Interview-150.org][Top Interview 150]]
+- [[./docs/30-days-of-pandas.org][30 Days of Pandas]]
+- [[./docs/introduction-to-pandas.org][Introduction to Pandas]]
 
 ** Development
 

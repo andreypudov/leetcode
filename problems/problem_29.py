@@ -73,7 +73,9 @@ class Solution:
 
         return quantity
 
-    def __get_max_pair(self, stack: list[(int, int)], dividend: int) -> tuple[int, int]:
+    def __get_max_pair(
+        self, stack: list[(int, int)], dividend: int
+    ) -> tuple[int, int]:
         while stack:
             pair = stack.pop()
             if pair[0] <= dividend:

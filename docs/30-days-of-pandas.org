@@ -1,0 +1,76 @@
+#+title: 30 Days of Pandas
+#+author: Andrey Pudov, Marya Letunenko
+#+date: <2024-09-04 Mon>
+
+** Data Filtering
+
+| Title                                                          | Difficulty |
+|----------------------------------------------------------------+------------|
+| [[../problems/problem_595.py][595. Big Countries]]                                             | Easy       |
+| [[../problems/problem_1757.py][1757. Recyclable and Low Fat Products]]                          | Easy       |
+| [[../problems/problem_183.py][183. Customers Who Never Order]]                                 | Easy       |
+| [[../problems/problem_1148.py][1148. Article Views I]]                                          | Easy       |
+
+** String Methods
+
+| Title                                                          | Difficulty |
+|----------------------------------------------------------------+------------|
+| [[../problems/problem_1683.py][1683. Invalid Tweets]]                                           | Easy       |
+| [[../problems/problem_1873.py][1873. Calculate Special Bonus]]                                  | Easy       |
+| [[../problems/problem_1667.py][1667. Fix Names in a Table]]                                     | Easy       |
+| [[../problems/problem_1517.py][1517. Find Users With Valid E-Mails]]                            | Easy       |
+| [[../problems/problem_1527.py][1527. Patients With a Condition]]                                | Easy       |
+
+** Strengthen Your Learning by Solving this Question
+
+| Title                                                          | Difficulty |
+|----------------------------------------------------------------+------------|
+| [[../problems/problem_0000.py][Count Occurrences in Text]]                                      | Medium     |
+
+** Data Manipulation
+
+| Title                                                          | Difficulty |
+|----------------------------------------------------------------+------------|
+| [[../problems/problem_177.py][177. Nth Highest Salary]]                                        | Medium     |
+| [[../problems/problem_176.py][176. Second Highest Salary]]                                     | Medium     |
+| [[../problems/problem_184.py][184. Department Highest Salary]]                                 | Medium     |
+| [[../problems/problem_178.py][178. Rank Scores]]                                               | Medium     |
+| [[../problems/problem_196.py][196. Delete Duplicate Emails]]                                   | Easy       |
+| [[../problems/problem_1795.py][1795. Rearrange Products Table]]                                 | Easy       |
+
+** Statistics
+
+| Title                                                          | Difficulty |
+|----------------------------------------------------------------+------------|
+| [[../problems/problem_0000.py][The Number of Rich Customers]]                                   | Easy       |
+| [[../problems/problem_0000.py][Immediate Food Delivery I]]                                      | Easy       |
+| [[../problems/problem_1907.py][1907. Count Salary Categories]]                                  | Medium     |
+
+** Strengthen Your Learning by Solving this Question
+
+| Title                                                          | Difficulty |
+|----------------------------------------------------------------+------------|
+| [[../problems/problem_0000.py][Ads Performance]]                                                | Easy       |
+| [[../problems/problem_1741.py][1741. Find Total Time Spent by Each Employee]]                   | Easy       |
+| [[../problems/problem_511.py][511. Game Play Analysis I]]                                      | Easy       |
+| [[../problems/problem_2356.py][2356. Number of Unique Subjects Taught by Each Teacher]]         | Easy       |
+| [[../problems/problem_596.py][596. Classes More Than 5 Students]]                              | Easy       |
+| [[../problems/problem_586.py][586. Customer Placing the Largest Number of Orders]]             | Easy       |
+| [[../problems/problem_1484.py][1484. Group Sold Products By The Date]]                          | Easy       |
+| [[../problems/problem_1693.py][1693. Daily Leads and Partners]]                                 | Easy       |
+
+** Data Aggregation
+
+| Title                                                          | Difficulty |
+|----------------------------------------------------------------+------------|
+| [[../problems/problem_1050.py][1050. Actors and Directors Who Cooperated At Least Three Times]] | Easy       |
+| [[../problems/problem_1378.py][1378. Replace Employee ID With The Unique Identifier]]           | Easy       |
+| [[../problems/problem_1280.py][1280. Students and Examinations]]                                | Easy       |
+| [[../problems/problem_570.py][570. Managers with at Least 5 Direct Reports]]                   | Medium     |
+| [[../problems/problem_607.py][607. Sales Person]]                                              | Easy       |
+
+** Strengthen Your Learning by Solving this Question
+
+| Title                                                          | Difficulty |
+|----------------------------------------------------------------+------------|
+| [[../problems/problem_0000.py][Accepted Candidates From the Interviews]]                        | Medium     |

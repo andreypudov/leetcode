@@ -7,11 +7,13 @@
 
 from typing import Optional
 
-from core.list import ListNode
+from problems.core.list import ListNode
 
 
 class Solution:
-    def mergeKLists(self, lists: list[Optional[ListNode]]) -> Optional[ListNode]:
+    def mergeKLists(
+        self, lists: list[Optional[ListNode]]
+    ) -> Optional[ListNode]:
         head = None
         current = None
 

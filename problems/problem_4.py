@@ -15,7 +15,9 @@
 
 
 class Solution:
-    def findMedianSortedArrays(self, nums1: list[int], nums2: list[int]) -> float:
+    def findMedianSortedArrays(
+        self, nums1: list[int], nums2: list[int]
+    ) -> float:
         merged = self.__merge(nums1, nums2)
         return self.__get_median(merged)
 

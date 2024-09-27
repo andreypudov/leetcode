@@ -11,7 +11,7 @@
 
 from typing import Optional
 
-from core.list import ListNode
+from problems.core.list import ListNode
 
 
 class Solution:
