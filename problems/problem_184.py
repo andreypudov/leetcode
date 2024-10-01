@@ -45,7 +45,9 @@ def department_highest_salary(
             suffixes=("_employee", "_department"),
         )
         .groupby("departmentId")
-        .apply(lambda x: x[x["salary"] == x["salary"].max()])
+        .apply(
+            lambda x: x[x["salary"] == x["salary"].max()], include_groups=False
+        )
         .reset_index(drop=True)[["name_department", "name_employee", "salary"]]
         .rename(
             columns={

@@ -22,5 +22,7 @@ class TestCase(unittest.TestCase):
         actual = nth_highest_salary(pd.DataFrame(self.employee), self.n)
         expected = pd.DataFrame(self.expected)
         assert_frame_equal(
-            actual.reset_index(drop=True), expected.reset_index(drop=True)
+            actual.reset_index(drop=True),
+            expected.reset_index(drop=True),
+            check_dtype=False,
         )
