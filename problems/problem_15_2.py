@@ -35,22 +35,26 @@ class Solution:
         # add pairs of negative numbers that sum up to zero
         for index in range(len(negatives)):
             for rindex in range(index + 1, len(negatives)):
-                if -(negatives[index] + negatives[rindex]) in positives_set:
+                positive = -(negatives[index] + negatives[rindex])
+
+                if positive in positives_set:
                     result.add(
                         (
                             negatives[index],
                             negatives[rindex],
-                            -(negatives[index] + negatives[rindex]),
+                            positive,
                         )
                     )
 
         # add pairs of positive numbers that sum up to zero
         for index in range(len(positives)):
             for rindex in range(index + 1, len(positives)):
-                if -(positives[index] + positives[rindex]) in negatives_set:
+                negative = -(positives[index] + positives[rindex])
+
+                if negative in negatives_set:
                     result.add(
                         (
-                            -(positives[index] + positives[rindex]),
+                            negative,
                             positives[index],
                             positives[rindex],
                         )

@@ -12,30 +12,25 @@ from typing import List
 
 class Solution:
     def threeSumClosest(self, nums: List[int], target: int) -> int:
-        closest = float("inf")
+        closest_sum = float("inf")
 
         nums.sort()
 
         for index in range(len(nums)):
             start = index + 1
             end = len(nums) - 1
-            current = nums[index]
 
             while start < end:
-                sum = current + nums[start] + nums[end]
-                closest = self.__update_closest(closest, sum, target)
+                current_sum = nums[index] + nums[start] + nums[end]
 
-                if sum == target:
-                    return sum
-                elif sum < target:
+                if abs(target - current_sum) < abs(target - closest_sum):
+                    closest_sum = current_sum
+
+                if current_sum < target:
                     start += 1
-                else:
+                elif current_sum > target:
                     end -= 1
+                else:
+                    return current_sum
 
-        return closest
-
-    def __update_closest(self, closest: int, sum: int, target: int) -> int:
-        if abs(target - sum) < abs(target - closest):
-            return sum
-
-        return closest
+        return closest_sum
