@@ -24,11 +24,11 @@
 | [[./problems/problem_13.py][13. Roman to Integer]]                              | Easy       |
 | [[./problems/problem_14.py][14. Longest Common Prefix]]                         | Easy       |
 | [[./problems/problem_15_2.py][15. 3Sum]]                                          | Medium     |
-| [[./problems/problem_16.py][16. 3Sum Closest]]                                  | Medium     |
+| [[./problems/problem_16_2.py][16. 3Sum Closest]]                                  | Medium     |
 | [[./problems/problem_23_2.py][23. Merge k Sorted Lists]]                          | Hard       |
 | [[./problems/problem_29.py][29. Divide Two Integers]]                           | Medium     |
 | [[./problems/problem_70.py][70. Climbing Stairs]]                               | Easy       |
-| [[./problems/problem_88.py][88. Merge Sorted Array]]                            | Easy       |
+| [[./problems/problem_88_2.py][88. Merge Sorted Array]]                            | Easy       |
 | [[./problems/problem_160.py][160. Intersection of Two Linked Lists]]             | Easy       |
 | [[./problems/problem_206.py][206. Reverse Linked List]]                          | Easy       |
 | [[./problems/problem_217.py][217. Contains Duplicate]]                           | Easy       |
