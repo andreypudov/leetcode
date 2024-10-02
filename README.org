@@ -28,6 +28,7 @@
 | [[./problems/problem_23_2.py][23. Merge k Sorted Lists]]                          | Hard       |
 | [[./problems/problem_29.py][29. Divide Two Integers]]                           | Medium     |
 | [[./problems/problem_70.py][70. Climbing Stairs]]                               | Easy       |
+| [[./problems/problem_88.py][88. Merge Sorted Array]]                            | Easy       |
 | [[./problems/problem_160.py][160. Intersection of Two Linked Lists]]             | Easy       |
 | [[./problems/problem_206.py][206. Reverse Linked List]]                          | Easy       |
 | [[./problems/problem_217.py][217. Contains Duplicate]]                           | Easy       |
