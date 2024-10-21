@@ -26,6 +26,7 @@
 | [[./problems/problem_15_2.py][15. 3Sum]]                                          | Medium     |
 | [[./problems/problem_16_2.py][16. 3Sum Closest]]                                  | Medium     |
 | [[./problems/problem_23_2.py][23. Merge k Sorted Lists]]                          | Hard       |
+| [[./problems/problem_26.py][26. Remove Duplicates from Sorted Array]]           | Easy       |
 | [[./problems/problem_27.py][27. Remove Element]]                                | Easy       |
 | [[./problems/problem_29.py][29. Divide Two Integers]]                           | Medium     |
 | [[./problems/problem_70.py][70. Climbing Stairs]]                               | Easy       |
