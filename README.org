@@ -37,6 +37,7 @@
 | [[./problems/problem_205.py][205. Isomorphic Strings]]                           | Easy       |
 | [[./problems/problem_206.py][206. Reverse Linked List]]                          | Easy       |
 | [[./problems/problem_217.py][217. Contains Duplicate]]                           | Easy       |
+| [[./problems/problem_290.py][290. Word Pattern]]                                 | Easy       |
 | [[./problems/problem_383.py][383. Ransom Note]]                                  | Easy       |
 | [[./problems/problem_392.py][392. Is Subsequence]]                               | Easy       |
 | [[./problems/problem_1114.py][1114. Print in Order]]                              | Easy       |
