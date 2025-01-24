@@ -34,6 +34,7 @@
 | [[./problems/problem_88_2.py][88. Merge Sorted Array]]                            | Easy       |
 | [[./problems/problem_125.py][125. Valid Palindrome]]                             | Easy       |
 | [[./problems/problem_160.py][160. Intersection of Two Linked Lists]]             | Easy       |
+| [[./problems/problem_205.py][205. Isomorphic Strings]]                           | Easy       |
 | [[./problems/problem_206.py][206. Reverse Linked List]]                          | Easy       |
 | [[./problems/problem_217.py][217. Contains Duplicate]]                           | Easy       |
 | [[./problems/problem_383.py][383. Ransom Note]]                                  | Easy       |
