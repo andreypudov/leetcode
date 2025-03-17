@@ -10,7 +10,7 @@ class TestCase(unittest.TestCase):
         self.solution_1 = Solution1()
         self.solution_2 = Solution2()
 
-    def test_canConstruct(self):
+    def test_majorityElement(self):
         for solution in [self.solution_1, self.solution_2]:
             self.assertEqual(solution.majorityElement([3, 2, 3]), 3)
             self.assertEqual(solution.majorityElement([2, 2, 1, 1, 1, 2, 2]), 2)

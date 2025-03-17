@@ -8,7 +8,7 @@ class TestCase(unittest.TestCase):
         super(TestCase, self).__init__(*args, **kwargs)
         self.solution = Solution()
 
-    def test_containsDuplicate(self):
+    def test_wordPattern(self):
         self.assertTrue(self.solution.wordPattern("abba", "dog cat cat dog"))
         self.assertFalse(self.solution.wordPattern("abba", "dog cat cat fish"))
         self.assertFalse(self.solution.wordPattern("aaaa", "dog cat cat dog"))
