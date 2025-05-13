@@ -1,6 +1,6 @@
-from typing import List, Protocol
+from typing import Protocol
 
 
 class Solution(Protocol):
-    def threeSumClosest(self, nums: List[int], target: int) -> int:
+    def isValid(self, s: str) -> bool:
         pass

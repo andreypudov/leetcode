@@ -25,6 +25,7 @@
 | [[./problems/problem_14.py][14. Longest Common Prefix]]                         | Easy       |
 | [[./problems/problem_15_2.py][15. 3Sum]]                                          | Medium     |
 | [[./problems/problem_16_2.py][16. 3Sum Closest]]                                  | Medium     |
+| [[./problems/problem_20_2.py][20. Valid Parentheses]]                             | Easy       |
 | [[./problems/problem_23_2.py][23. Merge k Sorted Lists]]                          | Hard       |
 | [[./problems/problem_26.py][26. Remove Duplicates from Sorted Array]]           | Easy       |
 | [[./problems/problem_27.py][27. Remove Element]]                                | Easy       |
@@ -62,6 +63,14 @@ pre-commit install
 
 ** Testing
 
+*** Run all test cases
+
 #+begin_src shell
 python -m unittest
+#+end_src
+
+*** Run specific test case
+
+#+begin_src shell
+python -m unittest -v  problems.tests.test_problem_<number>.TestCase
 #+end_src
