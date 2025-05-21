@@ -18,6 +18,6 @@ class TestCase(unittest.TestCase):
         helper = TreeHelper()
 
         p = helper.make_tree(p)
-        q = helper.make_list(q)
+        q = helper.make_tree(q)
 
         return self.solution.isSameTree(p, q)
