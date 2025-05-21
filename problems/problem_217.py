@@ -8,8 +8,10 @@
 # - 1 <= nums.length <= 10^5
 # - -10^9 <= nums[i] <= 10^9
 
+from typing import List
+
 
 class Solution:
-    def containsDuplicate(self, nums: list[int]) -> bool:
+    def containsDuplicate(self, nums: List[int]) -> bool:
         nums_set = set(nums)
         return len(nums_set) != len(nums)

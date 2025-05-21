@@ -12,9 +12,13 @@ class TestCase(unittest.TestCase):
 
     def test_getLongestSubsequence(self):
         for solution in [self.solution_1, self.solution_2]:
-            assert solution.getLongestSubsequence(
-                ["e", "a", "b"], [0, 0, 1]
-            ) == ["e", "b"]
-            assert solution.getLongestSubsequence(
-                ["a", "b", "c", "d"], [1, 0, 1, 1]
-            ) == ["a", "b", "c"]
+            self.assertEqual(
+                solution.getLongestSubsequence(["e", "a", "b"], [0, 0, 1]),
+                ["e", "b"],
+            )
+            self.assertEqual(
+                solution.getLongestSubsequence(
+                    ["a", "b", "c", "d"], [1, 0, 1, 1]
+                ),
+                ["a", "b", "c"],
+            )

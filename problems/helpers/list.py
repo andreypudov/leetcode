@@ -1,10 +1,10 @@
-from typing import Optional
+from typing import List, Optional
 
 from problems.core.list import ListNode
 
 
 class ListHelper:
-    def make_list(self, array: list[int]) -> Optional[ListNode]:
+    def make_list(self, array: List[int]) -> Optional[ListNode]:
         if len(array) == 0:
             return None
 
@@ -20,7 +20,7 @@ class ListHelper:
         head = previous
         return head
 
-    def make_list2(self, array: list[list[int]]) -> list[Optional[ListNode]]:
+    def make_list2(self, array: List[List[int]]) -> List[Optional[ListNode]]:
         if len(array) == 0:
             return None
 
@@ -59,7 +59,7 @@ class ListHelper:
             head = head.next
         print("]", end=end)
 
-    def print_list2(self, lists: list[Optional[ListNode]]):
+    def print_list2(self, lists: List[Optional[ListNode]]):
         if lists is None:
             print("[ ]")
             return
