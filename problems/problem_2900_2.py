@@ -22,10 +22,9 @@ class Solution:
         self, words: List[str], groups: List[int]
     ) -> List[str]:
         prev_group = None
-        shift = 0
+        answer = []
         for index, group in enumerate(groups):
-            if group == prev_group:
-                words.pop(index - shift)
-                shift += 1
+            if group != prev_group:
+                answer.append(words[index])
             prev_group = group
-        return words
+        return answer
