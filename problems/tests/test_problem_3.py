@@ -9,6 +9,6 @@ class TestCase(unittest.TestCase):
         self.solution = Solution()
 
     def test_lengthOfLongestSubstring(self):
-        assert self.solution.lengthOfLongestSubstring("abcabcbb") == 3
-        assert self.solution.lengthOfLongestSubstring("bbbbb") == 1
-        assert self.solution.lengthOfLongestSubstring("pwwkew") == 3
+        self.assertEqual(self.solution.lengthOfLongestSubstring("abcabcbb"), 3)
+        self.assertEqual(self.solution.lengthOfLongestSubstring("bbbbb"), 1)
+        self.assertEqual(self.solution.lengthOfLongestSubstring("pwwkew"), 3)

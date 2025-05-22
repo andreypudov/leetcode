@@ -12,9 +12,11 @@
 # - -10^9 <= target <= 10^9
 # - Only one valid answer exists.
 
+from typing import List
+
 
 class Solution:
-    def twoSum(self, nums: list[int], target: int) -> list[int]:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
         num_dict = {}
 
         for i, num in enumerate(nums):

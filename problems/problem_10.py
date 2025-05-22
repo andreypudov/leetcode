@@ -17,6 +17,8 @@
 # - It is guaranteed for each appearance of the character '*', there will be a
 #   previous valid character to match.
 
+from typing import List
+
 
 class Token:
     def __init__(self, value: str, is_star: bool):
@@ -43,7 +45,7 @@ class Solution:
 
         return self.__shift(s, tokens)
 
-    def __shift(self, string: str, pattern: list[Token]) -> bool:
+    def __shift(self, string: str, pattern: List[Token]) -> bool:
         if len(string) == 0 and len(pattern) == 0:
             return True
         if len(string) == 0 and self.__non_star_len(pattern) == 0:
@@ -71,7 +73,7 @@ class Solution:
 
         return False
 
-    def __remove_duplicate_tokens(self, tokens: list[Token]) -> list[Token]:
+    def __remove_duplicate_tokens(self, tokens: List[Token]) -> List[Token]:
         result = []
         previous = tokens[0]
 
@@ -94,14 +96,14 @@ class Solution:
     def __match(self, char: str, token: Token) -> bool:
         return True if char == token.value or token.value == "." else False
 
-    def __non_star_len(self, tokens: list[Token]) -> int:
+    def __non_star_len(self, tokens: List[Token]) -> int:
         count = 0
         for token in tokens:
             if not token.is_star:
                 count += 1
         return count
 
-    def tokenize(self, pattern: str) -> list[Token]:
+    def tokenize(self, pattern: str) -> List[Token]:
         tokens = []
 
         for _, token in enumerate(pattern):

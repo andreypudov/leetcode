@@ -8,43 +8,46 @@
 </a>
 #+end_html
 
-| Title                                             | Difficulty |
-|---------------------------------------------------+------------|
-| [[./problems/problem_1.py][1. Two Sum]]                                        | Easy       |
-| [[./problems/problem_2.py][2. Add Two Numbers]]                                | Medium     |
-| [[./problems/problem_3.py][3. Longest Substring Without Repeating Characters]] | Medium     |
-| [[./problems/problem_4.py][4. Median of Two Sorted Arrays]]                    | Hard       |
-| [[./problems/problem_5.py][5. Longest Palindromic Substring]]                  | Medium     |
-| [[./problems/problem_6.py][6. Zigzag Conversion]]                              | Medium     |
-| [[./problems/problem_7.py][7. Reverse Integer]]                                | Medium     |
-| [[./problems/problem_8.py][8. String to Integer (atoi)]]                       | Medium     |
-| [[./problems/problem_9.py][9. Palindrome Number]]                              | Easy       |
-| [[./problems/problem_10.py][10. Regular Expression Matching]]                   | Hard       |
-| [[./problems/problem_12.py][12. Integer to Roman]]                              | Medium     |
-| [[./problems/problem_13.py][13. Roman to Integer]]                              | Easy       |
-| [[./problems/problem_14.py][14. Longest Common Prefix]]                         | Easy       |
-| [[./problems/problem_15_2.py][15. 3Sum]]                                          | Medium     |
-| [[./problems/problem_16_2.py][16. 3Sum Closest]]                                  | Medium     |
-| [[./problems/problem_20_2.py][20. Valid Parentheses]]                             | Easy       |
-| [[./problems/problem_23_2.py][23. Merge k Sorted Lists]]                          | Hard       |
-| [[./problems/problem_26.py][26. Remove Duplicates from Sorted Array]]           | Easy       |
-| [[./problems/problem_27.py][27. Remove Element]]                                | Easy       |
-| [[./problems/problem_29.py][29. Divide Two Integers]]                           | Medium     |
-| [[./problems/problem_70.py][70. Climbing Stairs]]                               | Easy       |
-| [[./problems/problem_80.py][80. Remove Duplicates from Sorted Array II]]        | Medium     |
-| [[./problems/problem_88_2.py][88. Merge Sorted Array]]                            | Easy       |
-| [[./problems/problem_125.py][125. Valid Palindrome]]                             | Easy       |
-| [[./problems/problem_160.py][160. Intersection of Two Linked Lists]]             | Easy       |
-| [[./problems/problem_169.py][169. Majority Element]]                             | Easy       |
-| [[./problems/problem_189.py][189. Rotate Array]]                                 | Medium     |
-| [[./problems/problem_205.py][205. Isomorphic Strings]]                           | Easy       |
-| [[./problems/problem_206.py][206. Reverse Linked List]]                          | Easy       |
-| [[./problems/problem_217.py][217. Contains Duplicate]]                           | Easy       |
-| [[./problems/problem_290.py][290. Word Pattern]]                                 | Easy       |
-| [[./problems/problem_383.py][383. Ransom Note]]                                  | Easy       |
-| [[./problems/problem_392.py][392. Is Subsequence]]                               | Easy       |
-| [[./problems/problem_1114.py][1114. Print in Order]]                              | Easy       |
-| [[./problems/problem_1115.py][1115. Print FooBar Alternately]]                    | Medium     |
+| Title                                               | Difficulty |
+|-----------------------------------------------------+------------|
+| [[./problems/problem_1.py][1. Two Sum]]                                          | Easy       |
+| [[./problems/problem_2.py][2. Add Two Numbers]]                                  | Medium     |
+| [[./problems/problem_3.py][3. Longest Substring Without Repeating Characters]]   | Medium     |
+| [[./problems/problem_4.py][4. Median of Two Sorted Arrays]]                      | Hard       |
+| [[./problems/problem_5.py][5. Longest Palindromic Substring]]                    | Medium     |
+| [[./problems/problem_6.py][6. Zigzag Conversion]]                                | Medium     |
+| [[./problems/problem_7.py][7. Reverse Integer]]                                  | Medium     |
+| [[./problems/problem_8.py][8. String to Integer (atoi)]]                         | Medium     |
+| [[./problems/problem_9.py][9. Palindrome Number]]                                | Easy       |
+| [[./problems/problem_10.py][10. Regular Expression Matching]]                     | Hard       |
+| [[./problems/problem_12.py][12. Integer to Roman]]                                | Medium     |
+| [[./problems/problem_13.py][13. Roman to Integer]]                                | Easy       |
+| [[./problems/problem_14.py][14. Longest Common Prefix]]                           | Easy       |
+| [[./problems/problem_15_2.py][15. 3Sum]]                                            | Medium     |
+| [[./problems/problem_16_2.py][16. 3Sum Closest]]                                    | Medium     |
+| [[./problems/problem_20_2.py][20. Valid Parentheses]]                               | Easy       |
+| [[./problems/problem_23_2.py][23. Merge k Sorted Lists]]                            | Hard       |
+| [[./problems/problem_26.py][26. Remove Duplicates from Sorted Array]]             | Easy       |
+| [[./problems/problem_27.py][27. Remove Element]]                                  | Easy       |
+| [[./problems/problem_29.py][29. Divide Two Integers]]                             | Medium     |
+| [[./problems/problem_70.py][70. Climbing Stairs]]                                 | Easy       |
+| [[./problems/problem_80.py][80. Remove Duplicates from Sorted Array II]]          | Medium     |
+| [[./problems/problem_88_2.py][88. Merge Sorted Array]]                              | Easy       |
+| [[./problems/problem_100.py][100. Same Tree]]                                      | Easy       |
+| [[./problems/problem_119.py][119. Pascal's Triangle II]]                           | Easy       |
+| [[./problems/problem_125.py][125. Valid Palindrome]]                               | Easy       |
+| [[./problems/problem_160.py][160. Intersection of Two Linked Lists]]               | Easy       |
+| [[./problems/problem_169.py][169. Majority Element]]                               | Easy       |
+| [[./problems/problem_189.py][189. Rotate Array]]                                   | Medium     |
+| [[./problems/problem_205.py][205. Isomorphic Strings]]                             | Easy       |
+| [[./problems/problem_206.py][206. Reverse Linked List]]                            | Easy       |
+| [[./problems/problem_217.py][217. Contains Duplicate]]                             | Easy       |
+| [[./problems/problem_290.py][290. Word Pattern]]                                   | Easy       |
+| [[./problems/problem_383.py][383. Ransom Note]]                                    | Easy       |
+| [[./problems/problem_392.py][392. Is Subsequence]]                                 | Easy       |
+| [[./problems/problem_1114.py][1114. Print in Order]]                                | Easy       |
+| [[./problems/problem_1115.py][1115. Print FooBar Alternately]]                      | Medium     |
+| [[./problems/problem_2900_2.py][2900. Longest Unequal Adjacent Groups Subsequence I]] | Easy       |
 
 ** Study Plan
 
