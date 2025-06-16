@@ -1,4 +1,5 @@
 import unittest
+from typing import List
 
 from problems.helpers.list import ListHelper
 from problems.problem_23 import Solution as Solution1
@@ -26,8 +27,8 @@ class TestCase(unittest.TestCase):
     def __merge_k_lists(
         self,
         solution: Solution,
-        lists: list[list[int]],
-        expected: list[int],
+        lists: List[List[int]],
+        expected: List[int],
     ):
         helper = ListHelper()
 
@@ -36,4 +37,4 @@ class TestCase(unittest.TestCase):
 
         actual = solution.mergeKLists(lists)
 
-        assert helper.compare_lists(expected, actual)
+        self.assertTrue(helper.compare_lists(expected, actual))

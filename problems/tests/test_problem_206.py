@@ -1,4 +1,5 @@
 import unittest
+from typing import List
 
 from problems.helpers.list import ListHelper
 from problems.problem_206 import Solution as Solution1
@@ -21,7 +22,7 @@ class TestCase(unittest.TestCase):
             self.reverseList(solution, [], [])
 
     def reverseList(
-        self, solution: Solution, head: list[int], expected: list[int]
+        self, solution: Solution, head: List[int], expected: List[int]
     ):
         helper = ListHelper()
 
@@ -29,4 +30,4 @@ class TestCase(unittest.TestCase):
         expected = helper.make_list(expected)
         actual = solution.reverseList(head)
 
-        assert helper.compare_lists(expected, actual)
+        self.assertTrue(helper.compare_lists(expected, actual))

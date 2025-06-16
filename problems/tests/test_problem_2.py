@@ -1,4 +1,5 @@
 import unittest
+from typing import List
 
 from problems.helpers.list import ListHelper
 from problems.problem_2 import Solution
@@ -17,7 +18,7 @@ class TestCase(unittest.TestCase):
         )
 
     def __add_two_numbers(
-        self, l1: list[int], l2: list[int], expected: list[int]
+        self, l1: List[int], l2: List[int], expected: List[int]
     ):
         helper = ListHelper()
 
@@ -27,4 +28,4 @@ class TestCase(unittest.TestCase):
         expected = helper.make_list(expected)
         actual = self.solution.addTwoNumbers(l1, l2)
 
-        assert helper.compare_lists(expected, actual)
+        self.assertTrue(helper.compare_lists(expected, actual))
