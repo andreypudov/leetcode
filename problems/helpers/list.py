@@ -20,6 +20,28 @@ class ListHelper:
         head = previous
         return head
 
+    def make_list_with_cycle(
+        self, array: List[int], cycle_from_end_to: int
+    ) -> Optional[ListNode]:
+        head = self.make_list(array)
+        if not head:
+            return None
+
+        tail = head
+        length = 1
+        while tail.next:
+            tail = tail.next
+            length += 1
+
+        if 0 <= cycle_from_end_to <= length:
+            steps = length - cycle_from_end_to
+            cycle_start = head
+            for _ in range(steps - 1):
+                cycle_start = cycle_start.next
+            tail.next = cycle_start
+
+        return head
+
     def make_list2(self, array: List[List[int]]) -> List[Optional[ListNode]]:
         if len(array) == 0:
             return None
