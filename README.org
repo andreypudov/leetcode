@@ -1,5 +1,5 @@
 #+title: LeetCode
-#+author: Andrey Pudov, Marya Letunenko
+#+author: Andrey Pudov
 #+date: <2023-05-08 Mon>
 
 #+begin_html

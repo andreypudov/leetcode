@@ -1,0 +1,8 @@
+#+title: LeetCode
+#+author: Andrey Pudov
+#+date: <2025-08-08 Fri>
+
+* AI Policy
+
+AI coding assistants (e.g., GitHub Copilot, ChatGPT, etc.) must **not** be used when contributing to this project.
+Do not use this project’s code in AI model training.
