@@ -5,20 +5,20 @@
 #
 # Merge all the linked-lists into one sorted linked-list and return it.
 
-from typing import Optional
+from typing import List, Optional
 
 from problems.core.list import ListNode
 
 
 class Solution:
     def mergeKLists(
-        self, lists: list[Optional[ListNode]]
+        self, lists: List[Optional[ListNode]]
     ) -> Optional[ListNode]:
         elements = self.__make_sorted_list(lists)
 
         return self.__make_linked_list(elements)
 
-    def __make_sorted_list(self, lists: list[Optional[ListNode]]) -> list[int]:
+    def __make_sorted_list(self, lists: List[Optional[ListNode]]) -> List[int]:
         unsorted_list = []
 
         if not lists:
@@ -33,7 +33,7 @@ class Solution:
 
         return sorted(unsorted_list)
 
-    def __make_linked_list(self, elements: list[int]) -> Optional[ListNode]:
+    def __make_linked_list(self, elements: List[int]) -> Optional[ListNode]:
         head = None
         current = None
 

@@ -13,15 +13,17 @@
 # - 1 <= m + n <= 2000
 # - -10^6 <= nums1[i], nums2[i] <= 10^6
 
+from typing import List
+
 
 class Solution:
     def findMedianSortedArrays(
-        self, nums1: list[int], nums2: list[int]
+        self, nums1: List[int], nums2: List[int]
     ) -> float:
         merged = self.__merge(nums1, nums2)
         return self.__get_median(merged)
 
-    def __merge(self, nums1: list[int], nums2: list[int]) -> list[int]:
+    def __merge(self, nums1: List[int], nums2: List[int]) -> List[int]:
         merged = []
         i = 0
         j = 0
@@ -43,7 +45,7 @@ class Solution:
 
         return merged
 
-    def __get_median(self, nums: list[int]) -> float:
+    def __get_median(self, nums: List[int]) -> float:
         length = len(nums)
         if length % 2 == 0:
             return (nums[length // 2 - 1] + nums[length // 2]) / 2

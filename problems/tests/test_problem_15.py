@@ -2,7 +2,6 @@ import unittest
 
 from problems.problem_15 import Solution as Solution1
 from problems.problem_15_2 import Solution as Solution2
-from problems.protocols.problem_15 import Solution
 
 
 class TestCase(unittest.TestCase):
@@ -13,13 +12,10 @@ class TestCase(unittest.TestCase):
 
     def test_threeSum(self):
         for solution in [self.solution_1, self.solution_2]:
-            self.threeSum(solution)
-
-    def threeSum(self, solution: Solution):
-        self.assertEqual(
-            solution.threeSum([-1, 0, 1, 2, -1, -4]),
-            [[-1, 0, 1], [-1, -1, 2]],
-        )
-        self.assertEqual(solution.threeSum([0, 1, 1]), [])
-        self.assertEqual(solution.threeSum([0, 0, 0]), [[0, 0, 0]])
-        self.assertEqual(solution.threeSum([1, 2, -2, -1]), [])
+            self.assertEqual(
+                solution.threeSum([-1, 0, 1, 2, -1, -4]),
+                [[-1, 0, 1], [-1, -1, 2]],
+            )
+            self.assertEqual(solution.threeSum([0, 1, 1]), [])
+            self.assertEqual(solution.threeSum([0, 0, 0]), [[0, 0, 0]])
+            self.assertEqual(solution.threeSum([1, 2, -2, -1]), [])

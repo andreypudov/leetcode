@@ -19,6 +19,8 @@
 # - -2^31 <= dividend, divisor <= 2^31 - 1
 # - divisor != 0
 
+from typing import List, Tuple
+
 
 class Solution:
     def divide(self, dividend: int, divisor: int) -> int:
@@ -74,7 +76,7 @@ class Solution:
         return quantity
 
     def __get_max_pair(
-        self, stack: list[(int, int)], dividend: int
+        self, stack: List[Tuple[int, int]], dividend: int
     ) -> tuple[int, int]:
         while stack:
             pair = stack.pop()
