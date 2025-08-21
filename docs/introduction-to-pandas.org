@@ -1,5 +1,5 @@
 #+title: Introduction to Pandas
-#+author: Andrey Pudov, Marya Letunenko
+#+author: Andrey Pudov
 #+date: <2024-09-04 Mon>
 
 ** Pandas Data Structures
