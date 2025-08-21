@@ -12,4 +12,20 @@ from typing import List
 
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
-        pass
+        reminder = 1
+
+        for i in range(len(digits) - 1, -1, -1):
+            next = digits[i] + reminder
+
+            if next < 10:
+                reminder = 0
+                digits[i] = next
+                continue
+
+            reminder = 1
+            digits[i] = 0
+
+        if reminder == 1:
+            digits.insert(0, 1)
+
+        return digits
