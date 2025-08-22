@@ -11,34 +11,27 @@
 #
 # Notice that you may not slant the container.
 
-from itertools import groupby
-from operator import itemgetter
 from typing import List
 
 
 class Solution:
     def maxArea(self, height: List[int]) -> int:
-        indexed_height = list(enumerate(height))
-        sorted_height = sorted(indexed_height, key=lambda arr: arr[1])
-        grouped_height = [
-            list(v) for _, v in groupby(sorted_height, key=itemgetter(1))
-        ]
+        unique_height = set(height)
+        sorted_height = sorted(unique_height)
 
-        print(" :: ", grouped_height)
+        maximum_volume = 0
+        left = 0
+        right = len(height) - 1
 
-        max_amount = 0
+        for level in sorted_height:
+            while height[left] < level and left < right:
+                left += 1
 
-        for index in range(len(sorted_height) - 1, 0, -1):
-            print(" >> ", index)
+            while height[right] < level and right > left:
+                right -= 1
 
-            right_bar = sorted_height[index]
-            left_bar = sorted_height[index - 1]
+            current_volume = level * (right - left)
+            if current_volume > maximum_volume:
+                maximum_volume = current_volume
 
-            distance = abs(right_bar[0] - left_bar[0])
-            height = min(right_bar[1], left_bar[1])
-
-            current_amount = distance * height
-            if current_amount > max_amount:
-                max_amount = current_amount
-
-        return max_amount
+        return maximum_volume
