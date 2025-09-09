@@ -14,4 +14,10 @@ from typing import List
 
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        pass
+        profit = 0
+
+        for current, next_ in zip(prices, prices[1:]):
+            if current < next_:
+                profit += next_ - current
+
+        return profit
