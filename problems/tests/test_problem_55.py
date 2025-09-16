@@ -9,8 +9,8 @@ class TestCase(unittest.TestCase):
         self.solution = Solution()
 
     def test_divide(self):
-        # self.assertTrue(self.solution.canJump([2, 3, 1, 1, 4]))
+        self.assertTrue(self.solution.canJump([2, 3, 1, 1, 4]))
         self.assertFalse(self.solution.canJump([3, 2, 1, 0, 4]))
-        # self.assertTrue(self.solution.canJump([0]))
-        # self.assertFalse(self.solution.canJump([0, 1]))
-        # self.assertTrue(self.solution.canJump([2, 0, 0]))
+        self.assertTrue(self.solution.canJump([0]))
+        self.assertFalse(self.solution.canJump([0, 1]))
+        self.assertTrue(self.solution.canJump([2, 0, 0]))

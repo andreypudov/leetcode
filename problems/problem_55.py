@@ -11,19 +11,10 @@ from typing import List
 
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
-        zeroes = 0
+        goal = len(nums) - 1
 
-        if len(nums) == 1:
-            return True
+        for index in range(len(nums) - 2, -1, -1):
+            if index + nums[index] >= goal:
+                goal = index
 
-        for index in range(len(nums) - 1, -1, -1):
-            if nums[index] == 0:
-                zeroes += 1
-                continue
-            else:
-                if nums[index] - zeroes < 0:
-                    return False
-
-                zeroes = 0
-
-        return zeroes == 0
+        return goal == 0
