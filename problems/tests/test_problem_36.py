@@ -2,6 +2,7 @@ import unittest
 
 from problems.problem_36 import Solution as Solution1
 from problems.problem_36_2 import Solution as Solution2
+from problems.problem_36_3 import Solution as Solution3
 
 
 class TestCase(unittest.TestCase):
@@ -9,9 +10,10 @@ class TestCase(unittest.TestCase):
         super(TestCase, self).__init__(*args, **kwargs)
         self.solution_1 = Solution1()
         self.solution_2 = Solution2()
+        self.solution_3 = Solution3()
 
     def test_isValidSudoku(self):
-        for solution in [self.solution_1, self.solution_2]:
+        for solution in [self.solution_1, self.solution_2, self.solution_3]:
             self.assertEqual(
                 solution.isValidSudoku(
                     [
