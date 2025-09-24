@@ -12,16 +12,21 @@ class Solution:
         volume = 0
         length = len(height)
 
+        left = -1
+        right = -1
+
         for level in range(summit):
             bars = [1 if bar > level else 0 for bar in height]
-            left = -1
-            right = -1
 
             for bar in range(length):
                 if bars[bar] != 0:
-                    if left == -1:
-                        left = bar
+                    left = bar
+                    break
+
+            for bar in range(length - 1, -1, -1):
+                if bars[bar] != 0:
                     right = bar
+                    break
 
             volume += bars[left : right + 1].count(0)
 
