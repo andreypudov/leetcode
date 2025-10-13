@@ -16,16 +16,36 @@
 # in average O(1) time complexity.
 
 
+import random
+
+
 class RandomizedSet:
 
     def __init__(self):
-        pass
+        self.current_list = []
+        self.index_memory = {}
+        self.rng = random.Random(42)
 
     def insert(self, val: int) -> bool:
-        pass
+        if val in self.index_memory:
+            return False
+        else:
+            self.current_list.append(val)
+            self.index_memory[val] = len(self.current_list) - 1
+            return True
 
     def remove(self, val: int) -> bool:
-        pass
+        if val in self.index_memory:
+            if self.index_memory[val] == len(self.current_list) - 1:
+                self.current_list.pop()
+            else:
+                last_value = self.current_list.pop()
+                self.current_list[self.index_memory[val]] = last_value
+                self.index_memory[last_value] = self.index_memory[val]
+            del self.index_memory[val]
+            return True
+        else:
+            return False
 
     def getRandom(self) -> int:
-        pass
+        return self.rng.choice(self.current_list)
