@@ -1,6 +1,6 @@
 import unittest
 
-from problems.problem_380_2 import RandomizedSet
+from problems.problem_380 import RandomizedSet
 
 
 class TestCase(unittest.TestCase):
