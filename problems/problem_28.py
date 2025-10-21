@@ -7,6 +7,9 @@ from typing import Dict
 
 
 class Solution:
+    #
+    # Boyer–Moore string-search algorithm.
+    #
     def strStr(self, haystack: str, needle: str) -> int:
         if len(needle) == 0:
             return 0
@@ -15,27 +18,28 @@ class Solution:
             return -1
 
         shift_table = self.__make_shift_table(needle)
+
         return self.__find_first(haystack, needle, shift_table)
 
     def __make_shift_table(self, needle: str) -> Dict[str, int]:
         length = len(needle)
-        shift_table = {ch: length for ch in set(needle)}
+        shift_table = {character: length for character in set(needle)}
 
-        for i in range(length - 1):
-            shift_table[needle[i]] = length - i - 1
+        for index in range(length - 1):
+            shift_table[needle[index]] = length - index - 1
 
         return shift_table
 
     def __find_first(
         self, haystack: str, needle: str, shift_table: Dict[str, int]
     ) -> int:
-        haystack_len = len(haystack)
-        needle_len = len(needle)
-        index = needle_len - 1
+        haystack_length = len(haystack)
+        needle_length = len(needle)
+        index = needle_length - 1
 
-        while index < haystack_len:
-            needle_index = needle_len - 1
+        while index < haystack_length:
             haystack_index = index
+            needle_index = needle_length - 1
 
             while (
                 needle_index >= 0
@@ -47,7 +51,7 @@ class Solution:
             if needle_index == -1:
                 return haystack_index + 1
 
-            shift = shift_table.get(haystack[index], needle_len)
+            shift = shift_table.get(haystack[index], needle_length)
             index += shift
 
         return -1
