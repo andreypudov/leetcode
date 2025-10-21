@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Single Unit Test",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "unittest",
+      "args": [
+        "-v",
+        "problems.tests.test_problem_28.TestCase"
+      ],
+      "console": "integratedTerminal"
+    }
+  ]
+}

@@ -22,8 +22,8 @@ import random
 class RandomizedSet:
 
     def __init__(self):
-        self.items = []
-        self.positions = {}
+        self.items = list()
+        self.positions = dict()
         self.rng = random.Random(42)
 
     def insert(self, val: int) -> bool:
