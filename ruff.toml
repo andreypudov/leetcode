@@ -1,0 +1,6 @@
+# Shared Ruff configuration for direct CLI usage and editors.
+line-length = 80
+
+[lint]
+# E/W: pycodestyle, F: pyflakes (flake8 defaults), I: isort.
+select = ["E", "W", "F", "I"]
