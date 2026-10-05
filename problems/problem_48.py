@@ -16,4 +16,19 @@ class Solution:
         Do not return anything, modify matrix in-place instead.
         """
 
-        pass
+        width = len(matrix)
+        levels = width // 2
+
+        for level in range(levels):
+            limit = width - level - 1
+
+            for rotation in range(level, limit):
+                left_top = matrix[level][rotation]
+                right_top = matrix[rotation][limit]
+                right_bottom = matrix[limit][width - rotation - 1]
+                left_bottom = matrix[width - rotation - 1][level]
+
+                matrix[level][rotation] = left_bottom
+                matrix[rotation][limit] = left_top
+                matrix[limit][width - rotation - 1] = right_top
+                matrix[width - rotation - 1][level] = right_bottom
